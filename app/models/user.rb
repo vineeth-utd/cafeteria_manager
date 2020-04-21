@@ -5,4 +5,12 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :orders
+
+  def get_customer
+    all.where(role: "Customer")
+  end
+
+  def get_billing_clerk
+    all.where(role: "Billing-Clerk")
+  end
 end

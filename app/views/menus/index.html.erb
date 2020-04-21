@@ -1,0 +1,35 @@
+<h1 class=MenuPage-title>List Of Menus</h1>
+
+
+<% if @current_user.role == "Manager" %>
+  <ul>
+    <% Menu.all.each do |menu| %>
+      <li class="Menu-list">
+        <%= link_to menu.name, menu_items_path %>
+      </li>
+    <% end %>
+  </ul>
+
+
+
+<% elsif @current_user.role == "Customer" %>
+  <ul>
+    <% Menu.all.each do |menu| %>
+      <li class="Menu-list">
+        <%= link_to menu.name, menu_items_path %>
+      </li>
+    <% end %>
+  </ul>
+
+
+<% else %>
+  <ul>
+    <% Menu.all.each do |menu| %>
+      <li class="Menu-list">
+        <%= link_to menu.name, menu_items_path %>
+      </li>
+    <% end %>
+   </ul>
+
+
+<% end %>

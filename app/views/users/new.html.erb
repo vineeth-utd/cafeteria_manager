@@ -1,3 +1,4 @@
+<section class="Signup-Page">
 <p class="NewUsers-title">Welcome new User!</p>
 
 <section class="Usersnew">
@@ -19,7 +20,16 @@
       <%= form.password_field :password, class: "Form-input" %>
     </div>
     <div class="Form-section">
+      <p class="FormInput-label">Phone No: </p>
+      <%= form.text_field :phone, class: "Form-input" %>
+    </div>
+    <div class="Form-section">
+      <p class="FormInput-label">Address: </p>
+      <%= form.text_field :address, class: "Form-input" %>
+    </div>
+    <div class="Form-section">
       <%= form.submit "Sign-Up!", class: "Form-submit" %>
     </div>
   <% end %>
+</section>
 </section>
