@@ -1,19 +1,40 @@
 <% if @current_user.role == "Manager" %>
+  <%= form_with(url: "/menu_items", method: "POST", class: "AddMenuItem") do %>
+    <%= text_field_tag(name='name',
+                      value=nil,
+                      class: "AddMenuItem-text",
+                      placeholder: "What's next?")
+    %>
+    <%= text_field_tag(name='description',
+                      value=nil,
+                      class: "AddMenuItem-text",
+                      placeholder: "What's next?")
+    %>
+    <%= number_field_tag(name='price',
+                      value=nil,
+                      class: "AddMenuItem-price",
+                      placeholder: 0.0)
+    %>
+    <%= button_tag(value='Add', class: "AddMenuItem-button") %>
+  <% end %>
+
   <h1 class=MenuItemPage-title>@current_menu.name</h1>
+
   <ul>
-    <% MenuItem.all.each do |menuitem| %>
+    <% Menuitem.all.each do |menuitem| %>
       <li class="MenuItem-list">
 
       </li>
     <% end %>
   </ul>
+
 
 
 
 <% elsif @current_user.role == "Customer" %>
   <h1 class=MenuItemPage-title>@current_menu.name</h1>
   <ul>
-    <% MenuItem.all.each do |menuitem| %>
+    <% Menuitem.all.each do |menuitem| %>
       <li class="MenuItem-list">
 
       </li>
@@ -21,15 +42,37 @@
   </ul>
 
 
+
+
 <% else %>
+  <%= form_with(url: "/menu_items", method: "POST", class: "AddMenuItem") do %>
+    <%= text_field_tag(name='name',
+                      value=nil,
+                      class: "AddMenuItem-name",
+                      placeholder: "What's next?")
+    %>
+    <%= text_field_tag(name='description',
+                      value=nil,
+                      class: "AddMenuItem-description",
+                      placeholder: "What's next?")
+    %>
+    <%= text_field_tag(name='price',
+                      value=nil,
+                      class: "AddMenuItem-price",
+                      placeholder: "What's next?")
+    %>
+    <%= button_tag(value='Add', class: "AddMenuItem-button") %>
+  <% end %>
+
   <h1 class=MenuItemPage-title>@current_menu.name</h1>
+
   <ul>
-    <% MenuItem.all.each do |menuitem| %>
+    <% Menuitem.all.each do |menuitem| %>
       <li class="MenuItem-list">
 
       </li>
     <% end %>
-   </ul>
+  </ul>
 
 
 <% end %>

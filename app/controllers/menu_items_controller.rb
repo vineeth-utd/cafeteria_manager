@@ -1,4 +1,4 @@
-class OrderItemsController < ApplicationController
+class MenuItemsController < ApplicationController
   def index
     render "index"
   end

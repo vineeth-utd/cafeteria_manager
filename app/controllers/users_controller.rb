@@ -2,11 +2,16 @@ class UsersController < ApplicationController
   skip_before_action :ensure_user_logged_in
 
   def index
+    render "index"
   end
 
   def new
     render "/users/new"
   end
+
+  #def show
+  # render "/users/show"
+  #end
 
   def create
     user = User.new(
