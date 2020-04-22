@@ -15,6 +15,10 @@
         Welcome <%= @current_user.first_name %>!
         <%= link_to "Sign-Out", destroy_session_path, method: "delete" %>
       </p>
+
+      <% if @current_user.role == "User" %>
+        <p class="MyCart-link"> <%= link_to "My Cart", carts_path %> </p>
+      <% end %>
     <% end %>
 
     <% if flash[:error] %>

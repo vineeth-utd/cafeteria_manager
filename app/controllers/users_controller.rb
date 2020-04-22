@@ -9,10 +9,6 @@ class UsersController < ApplicationController
     render "/users/new"
   end
 
-  #def show
-  # render "/users/show"
-  #end
-
   def create
     user = User.new(
       role: "User",

@@ -45,3 +45,25 @@ body{
   font-size: 16px;
   margin-bottom: 20px;
 }
+
+.MenuItem-section{
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.AddToCart-button{
+  font-size: 14px;
+  margin-left: 30px;
+  color: white;
+  background-color: #488878;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.Menu-list{
+  align-items: center;
+  height: 30px;
+}

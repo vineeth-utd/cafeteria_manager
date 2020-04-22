@@ -7,13 +7,13 @@
 <h3 class="UserList-type">Billing-Clerks</h3>
 <% User.all.each do |user| %>
   <% if user.role == "Billing-Clerk" %>
-    <p class="UserList-content"> <%= user.first_name user.last_name %> </p>
+    <p class="UserList-content"> <%= user.first_name %> <%= user.last_name %> </p>
   <% end %>
 <% end %>
 
 <h3 class="UserList-type">Customers</h3>
 <% User.all.each do |user| %>
   <% if user.role == "User" %>
-    <p class="UserList-content"> <%= user.first_name user.last_name %> <p>
+    <p class="UserList-content"> <%= user.first_name %> <%= user.last_name %> <p>
   <% end %>
 <% end %>

@@ -7,10 +7,11 @@ class MenuItemsController < ApplicationController
   end
 
   def create
-    menu_item = MenuItems.create!(
+    menu_item = Menuitem.create!(
       name: params[:name],
       description: params[:description],
       price: params[:price],
     )
+    redirect_to menu_items_path
   end
 end
