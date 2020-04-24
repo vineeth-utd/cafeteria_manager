@@ -1,1 +1,9 @@
-<h1>My orders</h1>
+<% if @current_user.role == "Manager" %>
+  <h1>Orders</h1>
+
+<% elsif @current_user.role == "Billing-Clerk" %>
+  <h1>Orders</h1>
+
+<% else %>
+  <h1>My orders</h1>
+<% end %>

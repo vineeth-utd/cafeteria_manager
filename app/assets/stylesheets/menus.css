@@ -8,6 +8,11 @@ body{
   align-items: center;
 }
 
+.Menu-section{
+  display: inline-block;
+  overflow: auto;
+}
+
 .TodoItem-Container:hover{
   background-color: #F1EDF7;
 }

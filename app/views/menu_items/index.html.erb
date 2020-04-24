@@ -1,74 +1,88 @@
 <% if @current_user.role == "Manager" %>
-  <section class="AddMenuItem">
-    <%= form_with url: menu_items_path do |form| %>
-      <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
-      <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
-      <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
-      <%= form.submit "Add", class: "AddMenuItem-button" %>
-    <% end %>
+  <section class="MenuItem-section">
+    <section class="AddMenuItem">
+      <%= form_with url: menu_items_path do |form| %>
+        <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
+        <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
+        <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
+        <%= form.submit "Add", class: "AddMenuItem-button" %>
+      <% end %>
+    </section>
   </section>
 
   <% Menu.all.each do |menu| %>
-    <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
+    <section class="MenuItem-section">
+      <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
+    </section>
+    <section class="MenuItem-section">
+      <ul>
+        <% Menuitem.all.each do |menuitem| %>
+          <li class="MenuItem-list">
+            <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
 
-    <ul>
-      <% Menuitem.all.each do |menuitem| %>
-        <li class="MenuItem-list">
-          <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
-
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+    <% end %>
 
 
 
 
 <% elsif @current_user.role == "User" %>
-  <% Menu.all.each do |menu| %>
-    <% if menu.active_menu %>
-      <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
 
-      <ul>
-        <% Menuitem.all.each do |menuitem| %>
-          <li class="MenuItem-list">
-            <section class="MenuItem-section">
-              <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
+    <% Menu.all.each do |menu| %>
+      <% if menu.active_menu %>
+      <section class="MenuItem-section">
+        <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
+      </section>
+      <section class="MenuItem-section">
+        <ul>
+          <% Menuitem.all.each do |menuitem| %>
+            <li class="MenuItem-list">
+              <section class="MenuItem-section">
+                <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
 
-              <%= form_with url: carts_path, class: "Add-Cart" do |form| %>
-                <%= form.submit "Add To Cart", class: "AddToCart-button" %>
-              <% end %>
-            </section>
-          </li>
-        <% end %>
-      </ul>
+                <%= form_with url: carts_path, class: "Add-Cart" do |form| %>
+                  <%= form.submit "Add To Cart", class: "AddToCart-button" %>
+                <% end %>
+              </section>
+            </li>
+          <% end %>
+        </ul>
+      </section>
+      <% end %>
     <% end %>
-  <% end %>
 
 
 
 
 <% else %>
-  <section class="AddMenuItem">
-    <%= form_with url: menu_items_path do |form| %>
-      <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
-      <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
-      <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
-      <%= form.submit "Add", class: "AddMenuItem-button" %>
-    <% end %>
+  <section class="MenuItem-section">
+    <section class="AddMenuItem">
+      <%= form_with url: menu_items_path do |form| %>
+        <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
+        <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
+        <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
+        <%= form.submit "Add", class: "AddMenuItem-button" %>
+      <% end %>
+    </section>
   </section>
 
   <% Menu.all.each do |menu| %>
     <% if menu.active_menu %>
-      <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
-
-      <ul>
-        <% Menuitem.all.each do |menuitem| %>
-          <li class="MenuItem-list">
-            <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
-          </li>
-        <% end %>
-      </ul>
+      <section class="MenuItem-section">
+        <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
+      </section>
+      <section class="MenuItem-section">
+        <ul>
+          <% Menuitem.all.each do |menuitem| %>
+            <li class="MenuItem-list">
+              <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
+            </li>
+          <% end %>
+        </ul>
+      </section>
     <% end %>
   <% end %>
 

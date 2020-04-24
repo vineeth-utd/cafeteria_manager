@@ -19,6 +19,55 @@
       <% if @current_user.role == "User" %>
         <p class="MyCart-link"> <%= link_to "My Cart", carts_path %> </p>
       <% end %>
+
+      <section class="Dashboard-section">
+        <p class="Dashboard-title">Dashboard</p>
+        <% if @current_user.role == "Manager" %>
+          <ul>
+            <h3 class="Dashboard-list">
+              <%= link_to "About", about_index_path %>
+            </h3>
+            <h3 class="Dashboard-list">
+              <%= link_to "Menus", menus_path %>
+            </h3>
+            <h3 class="Dashboard-list">
+              <%= link_to "Orders", orders_path %>
+            </h3>
+            <h3 class="Dashboard-list">
+              <%= link_to "Users", users_path %>
+            </h3>
+          </ul>
+
+
+
+        <% elsif @current_user.role == "Billing-Clerk" %>
+          <ul>
+            <h3 class="Dashboard-list">
+              <%= link_to "About", about_index_path %>
+            </h3>
+            <h3 class="Dashboard-list">
+              <%= link_to "Menus", menus_path %>
+            </h3>
+            <h3 class="Dashboard-list">
+              <%= link_to "Orders", orders_path %>
+            </h3>
+          </ul>
+
+        <% else %>
+          <ul>
+            <h3 class="Dashboard-list">
+              <%= link_to "About", about_index_path %>
+            </h3>
+            <h3 class="Dashboard-list">
+              <%= link_to "Menus", menus_path %>
+            </h3>
+            <h3 class="Dashboard-list">
+              <%= link_to "Orders", orders_path %>
+            </h3>
+          </ul>
+        <% end %>
+      </section>
+
     <% end %>
 
     <% if flash[:error] %>
