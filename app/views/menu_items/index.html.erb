@@ -17,7 +17,7 @@
     </section>
     <section class="MenuItem-section">
       <ul>
-        <% Menuitem.all.each do |menuitem| %>
+        <% menu.menuitems.each do |menuitem| %>
           <li class="MenuItem-list">
             <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
 
@@ -39,8 +39,9 @@
       </section>
       <section class="MenuItem-section">
         <ul>
-          <% Menuitem.all.each do |menuitem| %>
+          <% menu.menuitems.all.each do |menuitem| %>
             <li class="MenuItem-list">
+              <h4 class="MenuItem-category"> <%= menuitem.category %> </h4>
               <section class="MenuItem-section">
                 <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
                 <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
@@ -66,7 +67,7 @@
       </section>
       <section class="MenuItem-section">
         <ul>
-          <% Menuitem.all.each do |menuitem| %>
+          <% menu.menuitems.all.each do |menuitem| %>
             <li class="MenuItem-list">
               <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
             </li>

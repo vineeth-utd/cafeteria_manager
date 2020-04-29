@@ -6,11 +6,19 @@ class User < ActiveRecord::Base
 
   has_many :orders
 
-  def get_customer
-    all.where(role: "Customer")
+  def is_Manager?
+    if role == "Manager"
+      true
+    else
+      false
+    end
   end
 
-  def get_billing_clerk
-    all.where(role: "Billing-Clerk")
+  def is_Billing_Clerk?
+    if role == "Billing-Clerk"
+      true
+    else
+      false
+    end
   end
 end

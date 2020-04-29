@@ -6,4 +6,10 @@
 
 <% else %>
   <h1>My orders</h1>
+  <%= Order.all.each do |order| %>
+    <p> Order Id: <%= order.id %> </p>
+    <%= order.menuitems.each do |menuitem| %>
+      <%= menuitem.menu_item_name %>
+    <% end %>
+  <% end %>
 <% end %>

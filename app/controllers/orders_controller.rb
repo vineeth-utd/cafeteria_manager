@@ -7,6 +7,8 @@ class OrdersController < ApplicationController
     render "new"
   end
 
-  def create
+  def update
+    order = Order.find_by(id: params[:order_id])
+    order.status = "order_confirmed"
   end
 end

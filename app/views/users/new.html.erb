@@ -1,35 +1,28 @@
-<section class="Signup-Page">
-<p class="NewUsers-title">Welcome new User!</p>
-
-<section class="Usersnew">
-  <%= form_with url: users_path do |form| %>
-    <div class="Form-section">
-      <p class="FormInput-label">First Name: </p>
-      <%= form.text_field :first_name, class: "Form-input" %>
-    </div>
-    <div class="Form-section">
-      <p class="FormInput-label">Last Name: </p>
-      <%= form.text_field :last_name, class: "Form-input" %>
-    </div>
-    <div class="Form-section">
-      <p class="FormInput-label">Email: </p>
-      <%= form.email_field :email, class: "Form-input" %>
-    </div>
-    <div class="Form-section">
-      <p class="FormInput-label">Password: </p>
-      <%= form.password_field :password, class: "Form-input" %>
-    </div>
-    <div class="Form-section">
-      <p class="FormInput-label">Phone No: </p>
-      <%= form.text_field :phone, class: "Form-input" %>
-    </div>
-    <div class="Form-section">
-      <p class="FormInput-label">Address: </p>
-      <%= form.text_field :address, class: "Form-input" %>
-    </div>
-    <div class="Form-section">
-      <%= form.submit "Sign-Up!", class: "Form-submit" %>
-    </div>
-  <% end %>
-</section>
-</section>
+<main class="Usersnew">
+  <p class="NewUsers-title">Welcome new User!</p>
+  <section class="SignUp-box">
+    <%= form_with url: users_path do |form| %>
+      <div class="Form-section">
+        <%= form.text_field :first_name, class: "Form-input", placeholder: "First Name" %>
+      </div>
+      <div class="Form-section">
+        <%= form.text_field :last_name, class: "Form-input", placeholder: "Last Name" %>
+      </div>
+      <div class="Form-section">
+        <%= form.email_field :email, class: "Form-input", placeholder: "Email" %>
+      </div>
+      <div class="Form-section">
+        <%= form.password_field :password, class: "Form-input", placeholder: "Password"  %>
+      </div>
+      <div class="Form-section">
+        <%= form.text_field :phone, class: "Form-input", placeholder: "Phone No:"  %>
+      </div>
+      <div class="Form-section">
+        <%= form.text_field :address, class: "Form-input", placeholder: "Address"  %>
+      </div>
+      <div class="Form-section">
+        <%= form.submit "Sign-Up!", class: "Form-submit" %>
+      </div>
+    <% end %>
+  </section>
+</main>

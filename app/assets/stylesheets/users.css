@@ -2,23 +2,31 @@ body{
   text-align: center;
 }
 
+.SignUp-box{
+  max-width: 500px;
+  margin: 20px auto;
+  border: 3px solid #8d3737;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px;
+}
+
+.Usersnew{
+  margin-top: 30px;
+}
+
 .NewUsers-title {
   margin-bottom: 20px;
   font-size: 30px;
 }
 
 .Form-section {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .Form-input {
   font-size: 20px;
   padding: 8px;
-}
-
-.FormInput-label {
-  color: #555555;
-  margin-bottom: 8px;
 }
 
 .Form-submit {

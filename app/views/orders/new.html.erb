@@ -5,10 +5,15 @@
     <li>
       <% Orderitem.all.each do |orderitem| %>
         <p class="Cart-content">
-          <%= orderitem.item_name %> <%= orderitem.price %>
+          <%= orderitem.menu_item_name %> <%= orderitem.menu_item_price %>
           <%= link_to "Remove", "/order_items/#{orderitem.id}", method: "DELETE" %>
         </p>
       <% end %>
     </li>
   </ul>
+  <section class="Place-order">
+    <%= form_with url: "/orders/#{Orderitem.order_id}", method: "PATCH" do |form| %>
+      <%= form.submit "Place Order", class: "Placeorder-button" %>
+    <% end %>
+  </section>
 <% end %>
