@@ -6,9 +6,9 @@ class OrderItemsController < ApplicationController
   end
 
   def create
-    menu_item = MenuItem.find(params[:menu_item_id])
+    menu_item = Menuitem.find(params[:menu_item_id])
     order = current_user.orders.being_created ? current_user.orders.being_created : Order.create!(user_id: current_user.id)
-    order_item = OrderItem.create!(
+    order_item = Orderitem.create!(
       order_id: order.id,
       menu_item_id: menu_item.id,
       menu_item_name: menu_item.name,

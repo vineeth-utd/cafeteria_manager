@@ -3,10 +3,10 @@
 <% if @current_user.role == "User" %>
   <ul>
     <li>
-      <% Cart.all.each do |cart| %>
+      <% Orderitem.all.each do |orderitem| %>
         <p class="Cart-content">
-          <%= cart.item_name %> <%= cart.price %>
-          <%= link_to "Remove", "/carts/#{cart.id}", method: "DELETE" %>
+          <%= orderitem.item_name %> <%= orderitem.price %>
+          <%= link_to "Remove", "/order_items/#{orderitem.id}", method: "DELETE" %>
         </p>
       <% end %>
     </li>

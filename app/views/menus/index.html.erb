@@ -1,7 +1,5 @@
-<h1 class=MenuPage-title>List Of Menus</h1>
-
-
 <% if @current_user.role == "Manager" %>
+  <h1 class=MenuPage-title>List Of Menus</h1>
   <section class="AddMenu">
     <%= form_with url: menus_path, class: "AddMenu" do |form| %>
       <%= form.text_field :name, class: "AddMenu-text", placeholder: "Any new Menu?" %>
@@ -26,31 +24,5 @@
       <% end %>
     </li>
   </ul>
-
-
-
-<% elsif @current_user.role == "User" %>
-  <ul>
-    <% Menu.all.each do |menu| %>
-      <% if menu.active_menu %>
-        <li class="Menu-list">
-          <%= link_to menu.name, menu_items_path %>
-        </li>
-      <% end %>
-    <% end %>
-  </ul>
-
-
-<% else %>
-  <ul>
-    <% Menu.all.each do |menu| %>
-      <% if menu.active_menu %>
-        <li class="Menu-list">
-          <%= link_to menu.name, menu_items_path %>
-        </li>
-      <% end %>
-    <% end %>
-   </ul>
-
 
 <% end %>
