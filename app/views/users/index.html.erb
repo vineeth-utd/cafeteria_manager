@@ -7,6 +7,7 @@
         <% if user.role == "Billing-Clerk" %>
           <p class="UserList-content">
             <%= user.first_name %> <%= user.last_name %>
+            <%= link_to "Remove from Billing-Clerk", "/users/#{user.id}", method: "PUT" %>
           </p>
         <% end %>
       <% end %>
@@ -21,11 +22,7 @@
         <% if user.role == "User" %>
           <p class="UserList-content">
             <%= user.first_name %> <%= user.last_name %>
-            <a href="javascript:void(0)" class="Userlist-button">
-              <%= form_with(url: "/users/#{user.id}" , method: "PUT" ) do %>
-                <input type="image" src="delete-24px.svg">
-              <% end %>
-            </a>
+            <%= link_to "Add as Billing-Clerk", "/users/#{user.id}", method: "PUT" %>
           <p>
         <% end %>
       <% end %>

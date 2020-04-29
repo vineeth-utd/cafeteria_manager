@@ -1,10 +1,11 @@
 <% if @current_user.role == "Manager" %>
   <section class="MenuItem-section">
     <section class="AddMenuItem">
-      <%= form_with url: menu_items_path do |form| %>
+      <%= form_with url: menu_items_path, method: "POST" do |form| %>
         <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
         <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
         <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
+        <%= form.text_field :category, class: "AddMenuItem-text", placeholder: "Which category?" %>
         <%= form.submit "Add", class: "AddMenuItem-button" %>
       <% end %>
     </section>
@@ -42,9 +43,8 @@
             <li class="MenuItem-list">
               <section class="MenuItem-section">
                 <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
-
-                <%= form_with url: carts_path, class: "Add-Cart" do |form| %>
-                  <%= form.submit "Add To Cart", class: "AddToCart-button" %>
+                <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
+                  <%= form.submit "Add To Cart", class: "AddItemCart-button" %>
                 <% end %>
               </section>
             </li>
@@ -58,16 +58,6 @@
 
 
 <% else %>
-  <section class="MenuItem-section">
-    <section class="AddMenuItem">
-      <%= form_with url: menu_items_path do |form| %>
-        <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
-        <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
-        <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
-        <%= form.submit "Add", class: "AddMenuItem-button" %>
-      <% end %>
-    </section>
-  </section>
 
   <% Menu.all.each do |menu| %>
     <% if menu.active_menu %>

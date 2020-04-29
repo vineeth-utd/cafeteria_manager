@@ -4,9 +4,9 @@ class OrdersController < ApplicationController
   end
 
   def new
+    render "new"
   end
 
   def create
-    #order = Orders.create!(date: Date.today)
   end
 end

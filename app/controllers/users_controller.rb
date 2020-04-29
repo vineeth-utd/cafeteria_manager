@@ -26,16 +26,16 @@ class UsersController < ApplicationController
       flash[:error] = user.errors.full_messages.join(", ")
       redirect_to new_user_path
     end
+  end
 
-    def update
-      id = params[:id]
-      user = User.find(id)
-      if user.role == "Billing-Clerk"
-        user.role = "User"
-      else
-        user.role = "Billing-Clerk"
-      end
-      redirect_to users_path
+  def update
+    id = params[:id]
+    user = User.find(id)
+    if user.role == "User"
+      user.role = "Billing-Clerk"
+    else
+      user.role = "User"
     end
+    redirect_to users_path
   end
 end

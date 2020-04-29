@@ -13,6 +13,7 @@ class MenuItemsController < ApplicationController
       name: params[:name],
       description: params[:description],
       price: params[:price],
+      category: params[:category],
     )
     redirect_to menu_items_path
   end

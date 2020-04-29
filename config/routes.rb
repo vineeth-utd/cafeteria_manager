@@ -12,5 +12,4 @@ Rails.application.routes.draw do
   resources :menu_items
   resources :orders
   resources :order_items
-  resources :carts
 end

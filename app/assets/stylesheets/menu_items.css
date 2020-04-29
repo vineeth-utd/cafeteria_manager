@@ -73,3 +73,12 @@ body{
   align-items: center;
   height: 30px;
 }
+
+.AddItemCart-button{
+  font-size: 14px;
+  color: white;
+  background-color: #488878;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  border-radius: 4px;
+}

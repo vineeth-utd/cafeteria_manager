@@ -13,12 +13,12 @@
     <% if @current_user %>
       <p class="UserHeader">
         Welcome <%= @current_user.first_name %>!
+        <% if @current_user.role == "User" %>
+          <%= link_to "My Cart", new_order_path %>
+        <% end %>
         <%= link_to "Sign-Out", destroy_session_path, method: "delete" %>
       </p>
 
-      <% if @current_user.role == "User" %>
-        <p class="MyCart-link"> <%= link_to "My Cart", carts_path %> </p>
-      <% end %>
 
       <section class="Dashboard-section">
         <p class="Dashboard-title">Dashboard</p>
@@ -46,7 +46,7 @@
               <%= link_to "About", about_index_path %>
             </h3>
             <h3 class="Dashboard-list">
-              <%= link_to "Menus", menus_path %>
+              <%= link_to "Menus", menu_items_path %>
             </h3>
             <h3 class="Dashboard-list">
               <%= link_to "Orders", orders_path %>
@@ -59,10 +59,10 @@
               <%= link_to "About", about_index_path %>
             </h3>
             <h3 class="Dashboard-list">
-              <%= link_to "Menus", menus_path %>
+              <%= link_to "Menus", menu_items_path %>
             </h3>
             <h3 class="Dashboard-list">
-              <%= link_to "Orders", orders_path %>
+              <%= link_to "My Orders", orders_path %>
             </h3>
           </ul>
         <% end %>

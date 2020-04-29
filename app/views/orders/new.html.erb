@@ -1,0 +1,14 @@
+<h1>My Cart</h1>
+
+<% if @current_user.role == "User" %>
+  <ul>
+    <li>
+      <% Cart.all.each do |cart| %>
+        <p class="Cart-content">
+          <%= cart.item_name %> <%= cart.price %>
+          <%= link_to "Remove", "/carts/#{cart.id}", method: "DELETE" %>
+        </p>
+      <% end %>
+    </li>
+  </ul>
+<% end %>
