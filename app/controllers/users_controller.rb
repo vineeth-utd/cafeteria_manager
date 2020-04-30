@@ -16,8 +16,6 @@ class UsersController < ApplicationController
       last_name: params[:last_name],
       email: params[:email],
       password: params[:password],
-      phone: params[:phone],
-      address: params[:address],
     )
     if user.save
       session[:current_user_id] = user.id
