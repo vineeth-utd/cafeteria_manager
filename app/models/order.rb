@@ -7,13 +7,14 @@ class Order < ActiveRecord::Base
   end
 
   def self.being_created
-    all.where("status= ?", "being_created").first
+    where("status = ?", "being_created").first
   end
 
   def self.conf_and_del
-    all.where.not("status= ?", "being_created")
+    where.not("status = ?", "being_created")
   end
+
   def self.pending_orders
-    all.where("status= ?", "order_confirmed")
+    where("status = ?", "order_confirmed")
   end
 end

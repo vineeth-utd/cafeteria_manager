@@ -6,10 +6,12 @@
 
 <% else %>
   <h1>My orders</h1>
-  <%= Order.all.each do |order| %>
-    <p> Order Id: <%= order.id %> </p>
-    <%= order.menuitems.each do |menuitem| %>
-      <%= menuitem.menu_item_name %>
+  <% Order.all.each do |order| %>
+    <% if order.status == "order_confirmed" || order.status == "delivered"%>
+      <h6> Order Id: <%= order.id %> </h6>
+      <% order.orderitems.each do |orderitem| %>
+        <p> <%= orderitem.menu_item_name %> - <%= orderitem.menu_item_price %> </p>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>

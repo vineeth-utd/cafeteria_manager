@@ -9,6 +9,9 @@ class OrdersController < ApplicationController
 
   def update
     order = Order.find_by(id: params[:order_id])
-    order.status = "order_confirmed"
+    #order.status = "order_confirmed"
+    order.update!(status: "order_confirmed")
+    #order.save!
+    redirect_to new_order_path
   end
 end
