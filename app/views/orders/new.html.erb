@@ -1,7 +1,7 @@
 <h1>My Cart</h1>
 
 <% if @current_user.role == "User" %>
-  <% order = Order.last %>
+  <% order = @orders.last %>
 
     <ul>
       <li>

@@ -6,7 +6,7 @@
 
 <% else %>
   <h1>My orders</h1>
-  <% Order.all.each do |order| %>
+  <% @orders.all.each do |order| %>
     <% if order.status == "order_confirmed" || order.status == "delivered"%>
       <h6> Order Id: <%= order.id %> </h6>
       <% order.orderitems.each do |orderitem| %>
