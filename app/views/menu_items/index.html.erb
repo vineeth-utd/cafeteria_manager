@@ -8,8 +8,12 @@
         <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
         <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
         <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
-        <%= form.text_field :category, class: "AddMenuItem-text", placeholder: "Which category?" %>
-        <!--<%= form.select_tag :category, class: "AddMenuItem-text", options_for_select(@categories) %> -->
+        <select name="category" class="AddMenuItem-text" placeholder="Category">
+          <option value="">Select Category</option>
+          <% @categories.each do |category| %>
+            <option value = <%= category %> > <%= category %> </option>
+          <% end %>
+        </select>
         <%= form.submit "Add", class: "AddMenuItem-button" %>
       <% end %>
     </section>
