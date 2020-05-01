@@ -1,7 +1,7 @@
 class Menu < ActiveRecord::Base
   has_many :menuitems
 
-  #def self.of_menu(menu)
-  # all.where(menu_id: menu.id)
-  #end
+  def self.active
+    all.where("active_menu = ?", true)
+  end
 end

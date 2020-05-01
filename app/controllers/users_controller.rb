@@ -27,13 +27,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    id = params[:id]
-    user = User.find(id)
+    user = User.find(params[:id])
     if user.role == "User"
       user.role = "Billing-Clerk"
     else
       user.role = "User"
     end
+    user.save!
     redirect_to users_path
   end
 end

@@ -7,7 +7,7 @@
         <% if user.role == "Billing-Clerk" %>
           <p class="UserList-content">
             <%= user.first_name %> <%= user.last_name %>
-            <%= link_to "Remove from Billing-Clerk", "/users/#{user.id}", method: "PUT" %>
+            <%= link_to "Remove from Billing-Clerk", "/users/#{user.id}", method: "PATCH" %>
           </p>
         <% end %>
       <% end %>
@@ -22,7 +22,7 @@
         <% if user.role == "User" %>
           <p class="UserList-content">
             <%= user.first_name %> <%= user.last_name %>
-            <%= link_to "Add as Billing-Clerk", "/users/#{user.id}", method: "PUT" %>
+            <%= link_to "Add as Billing-Clerk", "/users/#{user.id}", method: "PATCH" %>
           <p>
         <% end %>
       <% end %>

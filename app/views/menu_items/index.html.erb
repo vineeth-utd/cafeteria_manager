@@ -31,30 +31,25 @@
 
 
 <% elsif @current_user.role == "User" %>
-
-    <% Menu.all.each do |menu| %>
-      <% if menu.active_menu %>
-      <section class="MenuItem-section">
-        <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
-      </section>
-      <section class="MenuItem-section">
-        <ul>
-          <% menu.menuitems.all.each do |menuitem| %>
-            <li class="MenuItem-list">
-              <h4 class="MenuItem-category"> <%= menuitem.category %> </h4>
-              <section class="MenuItem-section">
-                <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
-                <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
-                  <%= form.submit "Add To Cart", class: "AddItemCart-button" %>
-                <% end %>
-              </section>
-            </li>
-          <% end %>
-        </ul>
-      </section>
+  <% menu = Menu.active %>
+  <section class="MenuItem-section">
+    <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
+  </section>
+  <section class="MenuItem-section">
+    <ul>
+      <% menu.menuitems.all.each do |menuitem| %>
+        <li class="MenuItem-list">
+          <h4 class="MenuItem-category"> <%= menuitem.category %> </h4>
+          <section class="MenuItem-section">
+            <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
+            <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
+              <%= form.submit "Add To Cart", class: "AddItemCart-button" %>
+            <% end %>
+          </section>
+        </li>
       <% end %>
-    <% end %>
-
+    </ul>
+  </section>
 
 
 
