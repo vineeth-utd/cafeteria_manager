@@ -93,6 +93,13 @@ body{
 .nav-link{
   margin: 5px;
   padding: 5px;
+  font-size: 13px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: rgb(8, 99, 138);
+  text-decoration: none;
+  border-radius: 8px;
 }
 
 .Dashboard-section{

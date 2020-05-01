@@ -40,8 +40,10 @@ body{
 }
 
 .UserList-title{
-  margin-bottom: 20px;
-  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  font-size: 40px;
+  font-family: sans-serif;
 }
 
 .AddUser{
@@ -49,13 +51,38 @@ body{
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
+.UserList-section{
+  margin-bottom: 30px;
+}
+
 .UserList-type{
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 25px;
+  color: darkred;
 }
 
 .UserList-content{
   margin-bottom: 10px;
+}
+
+.User-name{
+  font-size: 17px;
+  color: rgb(37, 138, 91);
+}
+
+.User-link{
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: rgb(8, 99, 138);
+  text-decoration: none;
+  padding: 0.7% 0.35%;
+  margin: 0.7% 0.35% 0.7% 0;
+  border-radius: 8px;
 }
 
 .Dashboard-section{

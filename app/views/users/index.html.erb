@@ -1,30 +1,32 @@
-  <h1 class="UserList-title">User's List<h1>
-
+<h1 class="UserList-title">User's List<h1>
+<section class="UserList-section">
   <h3 class="UserList-type">Billing-Clerks</h3>
   <ul>
     <li>
       <% User.all.each do |user| %>
         <% if user.role == "Billing-Clerk" %>
           <p class="UserList-content">
-            <%= user.first_name %> <%= user.last_name %>
-            <%= link_to "Remove from Billing-Clerk", "/users/#{user.id}", method: "PATCH" %>
+            <span class="User-name"> <%= user.first_name %> <%= user.last_name %> </span>
+            <%= link_to "Remove from Billing-Clerk", "/users/#{user.id}", method: "PATCH", class: "User-link" %>
           </p>
         <% end %>
       <% end %>
     </li>
   </ul>
+ </section>
 
-
+<section class="UserList-section">
   <h3 class="UserList-type">Customers</h3>
   <ul>
     <li>
       <% User.all.each do |user| %>
         <% if user.role == "User" %>
           <p class="UserList-content">
-            <%= user.first_name %> <%= user.last_name %>
-            <%= link_to "Add as Billing-Clerk", "/users/#{user.id}", method: "PATCH" %>
+            <span class="User-name"> <%= user.first_name %> <%= user.last_name %> </span>
+            <%= link_to "Add as Billing-Clerk", "/users/#{user.id}", method: "PATCH", class: "User-link" %>
           <p>
         <% end %>
       <% end %>
     </li>
   </ul>
+</section>
