@@ -1,20 +1,18 @@
 <section class="Category-section">
   <p class="Category-title"> <%= category %> </p>
 
-  <section class="MenuItem-section">
-    <ul>
-      <% menus.menuitems.all.each do |menuitem| %>
-        <% if menuitem.category == category %>
-          <li class="MenuItem-list">
-            <section class="MenuItem-container">
-              <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
-              <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
-                <%= form.submit "Add To Cart", class: "AddItemCart-button" %>
-              <% end %>
-            </section>
-          </li>
-        <% end %>
+  <ul>
+    <% menus.menuitems.all.each do |menuitem| %>
+      <% if menuitem.category == category %>
+        <li class="MenuItem-list">
+          <section class="MenuItem-container">
+            <p class="MenuItemList-text"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
+            <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
+              <%= form.submit "Add To Cart", class: "AddItemCart-button" %>
+            <% end %>
+          </section>
+        </li>
       <% end %>
-    </ul>
-  </section>
+    <% end %>
+  </ul>
 </section>

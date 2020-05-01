@@ -1,4 +1,4 @@
-<% if @current_user.role == "Manager" %>
+<!--<% if @current_user.role == "Manager" %>
   <section class="MenuItem-section">
     <section class="AddMenuItem">
       <%= form_with url: menu_items_path, method: "POST" do |form| %>
@@ -25,12 +25,27 @@
         <% end %>
       </ul>
     </section>
-    <% end %>
+    <% end %> -->
 
 
 
 
-<% elsif @current_user.role == "User" %>
+<!--<% elsif @current_user.role == "User" %> -->
+  <% if @current_user.role == "Manager" %>
+    <section class="MenuItem-section">
+      <section class="AddMenuItem">
+        <%= form_with url: menu_items_path, method: "POST" do |form| %>
+          <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
+          <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
+          <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
+          <%= form.text_field :category, class: "AddMenuItem-text", placeholder: "Which category?" %>
+          <%= form.submit "Add", class: "AddMenuItem-button" %>
+        <% end %>
+      </section>
+    </section>
+  <% end %>
+
+
   <% menu = Menu.active %>
   <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
 
@@ -41,7 +56,7 @@
 
 
 
-<% else %>
+<!-- <% else %>
 
   <% Menu.all.each do |menu| %>
     <% if menu.active_menu %>
@@ -61,4 +76,4 @@
   <% end %>
 
 
-<% end %>
+<% end %> -->
