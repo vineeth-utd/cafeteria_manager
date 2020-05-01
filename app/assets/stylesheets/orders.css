@@ -1,8 +1,39 @@
+.Cart-title{
+  font-size: 30px;
+}
+
+.Emptycart-text{
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.Cart-content{
+  margin-top: 15px;
+}
+
+.CartRemove-link{
+
+}
+
 .Placeorder-button{
+  margin-top: 20px;
   font-size: 14px;
   color: white;
   background-color: #488878;
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
+}
+
+.Order-title{
+ font-size: 30px;
+}
+
+.OrderId-text{
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.Order-content{
+ margin-top: 20px;
 }

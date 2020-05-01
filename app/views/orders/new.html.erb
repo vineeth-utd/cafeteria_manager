@@ -1,15 +1,21 @@
-<h1>My Cart</h1>
+<h1 class="Cart-title">My Cart</h1>
 
 <% if @current_user.role == "User" %>
-  <% order = @orders.last %>
-
+  <% order = @current_user.orders.being_created %>
+  <% if order == nil %>
+    <h6 class="Emptycart-text">Cart is empty!</h6>
+  <% else %>
     <ul>
       <li>
         <% Orderitem.all.each do |orderitem| %>
           <% if orderitem.order_id == order.id %>
             <p class="Cart-content">
               <%= orderitem.menu_item_name %> <%= orderitem.menu_item_price %>
-              <%= link_to "Remove", "/order_items/#{orderitem.id}", method: "DELETE" %>
+              <%= link_to "Remove",
+                "/order_items/#{orderitem.id}",
+                method: "DELETE",
+                class: "CartRemove-link"
+              %>
             </p>
           <% end %>
         <% end %>
@@ -20,7 +26,7 @@
         <%= form.submit "Place Order", class: "Placeorder-button" %>
       <% end %>
     </section>
-
+  <% end %>
 
 
 <% end %>

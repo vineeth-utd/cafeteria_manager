@@ -11,13 +11,19 @@
 
   <body>
     <% if @current_user %>
-      <p class="UserHeader">
-        Welcome <%= @current_user.first_name %>!
-        <% if @current_user.role == "User" %>
-          <%= link_to "My Cart", new_order_path %>
-        <% end %>
-        <%= link_to "Sign-Out", destroy_session_path, method: "delete" %>
-      </p>
+      <nav class="UserHeader">
+        <h2 class="Welcome-text">Welcome <%= @current_user.first_name %>!</h2>
+        <ul class="nav-links">
+          <li>
+            <% if @current_user.role == "User" %>
+              <%= link_to "My Cart", new_order_path, class: "nav-link" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "Sign-Out", destroy_session_path, method: "delete", class: "nav-link" %>
+          </li>
+        </ul>
+      </nav>
 
 
       <section class="Dashboard-section">
@@ -25,7 +31,7 @@
         <% if @current_user.role == "Manager" %>
           <ul>
             <h3 class="Dashboard-list">
-              <%= link_to "About", about_index_path %>
+              <%= link_to "About Us", about_index_path %>
             </h3>
             <h3 class="Dashboard-list">
               <%= link_to "Menus", menus_path %>
@@ -43,7 +49,7 @@
         <% elsif @current_user.role == "Billing-Clerk" %>
           <ul>
             <h3 class="Dashboard-list">
-              <%= link_to "About", about_index_path %>
+              <%= link_to "About Us", about_index_path %>
             </h3>
             <h3 class="Dashboard-list">
               <%= link_to "Menus", menu_items_path %>
@@ -56,7 +62,7 @@
         <% else %>
           <ul>
             <h3 class="Dashboard-list">
-              <%= link_to "About", about_index_path %>
+              <%= link_to "About Us", about_index_path %>
             </h3>
             <h3 class="Dashboard-list">
               <%= link_to "Menus", menu_items_path %>

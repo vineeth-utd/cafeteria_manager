@@ -17,6 +17,8 @@ body{
 .NewUsers-title {
   margin-bottom: 20px;
   font-size: 30px;
+  /*color: whitesmoke;*/
+  color: black;
 }
 
 .Form-section {
@@ -32,7 +34,7 @@ body{
 .Form-submit {
   font-size: 20px;
   padding: 10px;
-  background-color: #0ea86d20;
+  background-color: whitesmoke;
   border: 0;
   border-radius: 4px;
 }

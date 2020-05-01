@@ -17,4 +17,10 @@ class Order < ActiveRecord::Base
   def self.pending_orders
     where("status = ?", "order_confirmed")
   end
+
+  def totalprice
+    price = 0
+    orderitems.each { |item| price = price + item.menu_item_price }
+    price
+  end
 end
