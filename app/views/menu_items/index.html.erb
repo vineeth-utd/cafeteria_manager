@@ -32,24 +32,12 @@
 
 <% elsif @current_user.role == "User" %>
   <% menu = Menu.active %>
-  <section class="MenuItem-section">
-    <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
-  </section>
-  <section class="MenuItem-section">
-    <ul>
-      <% menu.menuitems.all.each do |menuitem| %>
-        <li class="MenuItem-list">
-          <h4 class="MenuItem-category"> <%= menuitem.category %> </h4>
-          <section class="MenuItem-section">
-            <p class="Menu-list"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
-            <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
-              <%= form.submit "Add To Cart", class: "AddItemCart-button" %>
-            <% end %>
-          </section>
-        </li>
-      <% end %>
-    </ul>
-  </section>
+  <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
+
+  <%= render partial: "menulist", locals: {category: "Starters", menus: menu} %>
+  <%= render partial: "menulist", locals: {category: "Side Dishes", menus: menu} %>
+  <%= render partial: "menulist", locals: {category: "Main Course", menus: menu} %>
+  <%= render partial: "menulist", locals: {category: "Desserts", menus: menu} %>
 
 
 

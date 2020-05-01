@@ -8,12 +8,6 @@ body{
   margin-bottom: 30px;
 }
 
-.MenuItem-section{
-  text-align: center;
-  display: inline-block;
-  /*overflow: auto;*/
-}
-
 .AddMenuItem-text{
   padding: 6px 12px;
   font-size: 14px;
@@ -45,17 +39,24 @@ body{
   font-size: 40px;
   margin-bottom: 50px;
   margin-top: 50px;
+  margin-left: 100px;
 }
 
-.MenuItem-list{
+/*.MenuItem-list{
   font-size: 16px;
   margin-bottom: 20px;
-}
+}*/
 
 .MenuItem-section{
   display: flex;
   margin-bottom: 30px;
   margin-left: 30px;
+}
+
+.MenuItem-container{
+  display: flex ;
+  padding: 2px 8px;
+  text-align: center;
 }
 
 .AddToCart-button{
@@ -69,10 +70,10 @@ body{
   height: 30px;
 }
 
-.Menu-list{
-  align-items: center;
+/*.Menu-list{
+  text-align: center;
   height: 30px;
-}
+}*/
 
 .AddItemCart-button{
   font-size: 14px;
@@ -81,4 +82,20 @@ body{
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
+  margin-left: 8px;
+}
+
+.Category-title{
+  float: left;
+  color: #453C52;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Category-section{
+  margin-bottom: 20px;
+  float: left;
 }
