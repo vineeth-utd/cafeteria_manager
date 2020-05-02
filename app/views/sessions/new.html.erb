@@ -3,7 +3,11 @@
   <section class="SignUp-box">
     <%= form_with url: sessions_path do |form| %>
       <div class="Form-section">
-        <%= form.email_field :email, class: "Form-input", placeholder: "Email"  %>
+        <%= form.email_field :email,
+          class: "Form-input",
+          placeholder: "Email",
+          autofocus: "autofocus"
+        %>
       </div>
       <div class="Form-section">
         <%= form.password_field :password, class: "Form-input", placeholder: "Password"  %>

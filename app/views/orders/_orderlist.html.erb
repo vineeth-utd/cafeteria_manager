@@ -1,0 +1,27 @@
+<% orders.each do |order| %>
+  <section class="OrderItem-section">
+    <p class="OrderId-text"> Order Id: <%= order.id %> </p>
+
+    <p class="Ordered-by">
+      <% if @current_user.role == "User" %>
+        <%= @current_user.first_name %> <%= @current_user.last_name %>
+      <% else %>
+        Walk-In Customer
+      <% end %>
+    </p>
+
+    <section class="OrderItem-content">
+      <ul>
+        <% order.orderitems.each do |orderitem| %>
+          <li class="Order-text">
+            <%= orderitem.menu_item_name %> - <%= orderitem.menu_item_price %>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+
+    <p class="Total-price">Total: <%= order.totalprice %> Rs. </p>
+
+    <p class="Order-status"> <%= order.order_status %> </p>
+  </section>
+<% end %>

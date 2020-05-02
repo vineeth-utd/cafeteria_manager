@@ -1,18 +1,9 @@
-<% if @current_user.role == "Manager" %>
-  <h1>Orders</h1>
+<% if @current_user.role == "User" %>
+  <h1 class="Order-title">My orders</h1>
+  <%= render partial: "orderlist", locals: {orders: @orders} %>
 
-<% elsif @current_user.role == "Billing-Clerk" %>
-  <h1>Orders</h1>
 
 <% else %>
-  <h1 class="Order-title">My orders</h1>
-  <% @orders.all.each do |order| %>
-    <% if order.status == "order_confirmed" || order.status == "delivered"%>
-      <h6 class="OrderId-text"> Order Id: <%= order.id %> </h6>
-      <% order.orderitems.each do |orderitem| %>
-        <p class="Order-text"> <%= orderitem.menu_item_name %> - <%= orderitem.menu_item_price %> </p>
-      <% end %>
-      <p class="Total-price">Total: <%= order.totalprice %> </p>
-    <% end %>
-  <% end %>
+  <h1 class="Order-title">Orders</h1>
+  <%= render partial: "orderlist", locals: {orders: @all_orders} %>
 <% end %>

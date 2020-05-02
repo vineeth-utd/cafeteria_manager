@@ -18,6 +18,24 @@ class Order < ActiveRecord::Base
     where("status = ?", "order_confirmed")
   end
 
+  def self.is_delivered?
+    if status == "delivered"
+      true
+    else
+      false
+    end
+  end
+
+  def order_status
+    if status == "delivered"
+      "Delivered at "
+    elsif status == "being_created"
+      "Being Created"
+    else
+      "Order Confirmed"
+    end
+  end
+
   def totalprice
     price = 0
     orderitems.each { |item| price = price + item.menu_item_price }

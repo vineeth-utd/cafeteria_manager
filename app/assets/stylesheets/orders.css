@@ -1,3 +1,7 @@
+.body{
+  text-align: center;
+}
+
 .Cart-title{
   font-size: 30px;
 }
@@ -29,11 +33,36 @@
  font-size: 30px;
 }
 
+.OrderItem-section{
+  border: 1px solid transparent;
+  background-color: whitesmoke;
+  margin-top: 20px;
+}
+
 .OrderId-text{
   font-size: 20px;
   margin-top: 30px;
 }
 
-.Order-content{
+.Ordered-by{
+
+}
+
+.OrderItem-content{
  margin-top: 20px;
+}
+
+.Order-text{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.Total-price{
+  margin-top: 20px;
+}
+
+.Order-status{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: rgb(0, 128, 79);
 }

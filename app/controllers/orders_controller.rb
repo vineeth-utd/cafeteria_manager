@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.where(user_id: current_user.id)
+    @orders = Order.where(user_id: current_user.id).conf_and_del
+    @all_orders = Order.conf_and_del
     render "index"
   end
 
