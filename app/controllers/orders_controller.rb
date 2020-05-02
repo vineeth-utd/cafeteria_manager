@@ -12,8 +12,19 @@ class OrdersController < ApplicationController
 
   def update
     order = Order.find(params[:id])
-    order.status = "order_confirmed"
-    order.save!
-    redirect_to menu_items_path
+    if order.status == "being_created"
+      order.status = "order_confirmed"
+      order.save!
+      redirect_to menu_items_path
+    else
+      order.status = "delivered"
+      order.save!
+      redirect_to pending_orders_path
+    end
+  end
+
+  def pending_orders
+    @orders = Order.get_pending_orders
+    render "pending_orders"
   end
 end

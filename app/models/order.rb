@@ -14,7 +14,7 @@ class Order < ActiveRecord::Base
     where.not("status = ?", "being_created")
   end
 
-  def self.pending_orders
+  def self.get_pending_orders
     where("status = ?", "order_confirmed")
   end
 

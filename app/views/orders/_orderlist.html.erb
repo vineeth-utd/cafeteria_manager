@@ -22,6 +22,14 @@
 
     <p class="Total-price">Total: <%= order.totalprice %> Rs. </p>
 
+    <section class="Placeorder">
+      <% if @pending_button %>
+        <%= form_with url: "/orders/#{order.id}", method: "PATCH" do |form| %>
+          <%= form.submit "Deliver", class: "PlaceOrder-button" %>
+        <% end %>
+      <% end %>
+    </section>
+
     <p class="Order-status"> <%= order.order_status %> </p>
   </section>
 <% end %>
