@@ -54,6 +54,11 @@ body{
   align-items: center;
 }
 
+.MenuItem-icon{
+  margin-left: 10px;
+  visibility: hidden;
+}
+
 .AddItemCart-button{
   font-size: 14px;
   color: white;
@@ -61,7 +66,17 @@ body{
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
-  margin-left: 8px;
+  margin-left: 10px;
+}
+
+.MenuItem-container:hover{
+  background-color: #F1EDF7;
+}
+
+.MenuItem-container:hover > .MenuItem-icon{
+  visibility: visible;
+  height: 15px;
+  width: 15px;
 }
 
 .Category-title{
@@ -81,5 +96,5 @@ body{
 }
 
 .MenuItemList-text{
-  font-size: 20px;
+  font-size: 18px;
 }

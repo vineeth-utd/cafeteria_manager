@@ -1,0 +1,37 @@
+<h1 class=EditMenuItemPage-title>Edit Menu Item</h1>
+
+  <section class="MenuItem-section">
+    <section class="AddMenuItem">
+      <%= form_with url: "/menu_items/#{@menuitem.id}", method: "PATCH" do |form| %>
+        <%= form.text_field :name,
+          class: "AddMenuItem-text",
+          placeholder: "MenuItem Name",
+          value: @menuitem.name,
+          autofocus: "autofocus"
+        %>
+
+        <%= form.text_field :description,
+          class: "AddMenuItem-text",
+          placeholder: "Description",
+          value: @menuitem.description,
+          autofocus: "autofocus"
+        %>
+
+        <%= form.number_field :price,
+          class: "AddMenuItem-price",
+          placeholder: 0.0,
+          value: @menuitem.price,
+          autofocus: "autofocus"
+        %>
+
+        <select name="category" class="AddMenuItem-text" placeholder="Category">
+          <option value=""> <%= @menuitem.category %> </option>
+          <% @categories.each do |category| %>
+            <option value = <%= category %> > <%= category %> </option>
+          <% end %>
+        </select>
+
+        <%= form.submit "Update", class: "AddMenuItem-button" %>
+      <% end %>
+    </section>
+  </section>
