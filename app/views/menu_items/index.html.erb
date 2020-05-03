@@ -1,8 +1,8 @@
-<% if @current_user.role == "Manager" %>
-  <% menu = Menu.active %>
-  <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
+<% menu = Menu.active %>
+<h3 class=MenuItemPage-title> <%= menu.name %> </h3>
 
-  <section class="MenuItem-section">
+<% if @current_user.role == "Manager" %>
+ <section class="MenuItem-section">
     <section class="AddMenuItem">
       <%= form_with url: menu_items_path, method: "POST" do |form| %>
         <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
@@ -20,34 +20,9 @@
   </section>
 
   <h2 class="WalkIn-title">Walk-In Customer</h2>
-
-  <%= render partial: "menulist", locals: {category: "Starters", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Side Dishes", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Main Course", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Desserts", menus: menu} %>
-
-
-
-
-
-<% elsif @current_user.role == "User" %>
-  <% menu = Menu.active %>
-  <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
-
-  <%= render partial: "menulist", locals: {category: "Starters", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Side Dishes", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Main Course", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Desserts", menus: menu} %>
-
-
-
-<% else %>
-  <h2 class="WalkIn-title">Walk-In Customer</h2>
-  <% menu = Menu.active %>
-  <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
-
-  <%= render partial: "menulist", locals: {category: "Starters", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Side Dishes", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Main Course", menus: menu} %>
-  <%= render partial: "menulist", locals: {category: "Desserts", menus: menu} %>
 <% end %>
+
+<%= render partial: "menulist", locals: {category: "Starters", menus: menu} %>
+<%= render partial: "menulist", locals: {category: "Side Dishes", menus: menu} %>
+<%= render partial: "menulist", locals: {category: "Main Course", menus: menu} %>
+<%= render partial: "menulist", locals: {category: "Desserts", menus: menu} %>
