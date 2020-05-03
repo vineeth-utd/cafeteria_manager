@@ -7,7 +7,6 @@ class MenuItemsController < ApplicationController
   def edit
     @menuitem = Menuitem.find(params[:id])
     @categories = Menuitem.distinct.pluck(:category)
-    render "edit"
   end
 
   def create

@@ -9,7 +9,7 @@
             <p class="MenuItemList-text"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
 
             <% if @current_user.role == "Manager" %>
-              <%= form_with(url: "/menu_items/#{menuitem.id}/edit", method: "GET", class: "MenuItem-icon" ) do %>
+              <%= form_with(url: edit_menu_item_path(id: menuitem.id), method: "GET", class: "MenuItem-icon" ) do %>
                 <input type="image" src="assets/edit-solid.svg" >
               <% end %>
 

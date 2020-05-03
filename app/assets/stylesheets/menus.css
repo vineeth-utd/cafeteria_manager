@@ -2,37 +2,16 @@ body{
   text-align: center;
 }
 
-.Menu-Container{
-  display:flex ;
-  padding: 2px 8px;
-  align-items: center;
-}
-
-.Menu-section{
-  display: inline-block;
-  overflow: auto;
+.MenuPage-title{
+  font-size: 30px;
+  margin-bottom: 50px;
+  margin-top: 25px;
 }
 
 .AddMenu{
   height: 32px;
   align-items: stretch;
-  margin-bottom: 30px;
-}
-
-.MenuPage-title{
-  font-size: 40px;
-  margin-bottom: 50px;
-  margin-top: 25px;
-}
-
-.Menu-Checkbox{
-  width: 16px;
-  height: 16px;
-}
-
-.Menu-list{
-  font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .AddMenu-text{
@@ -51,4 +30,21 @@ body{
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
+}
+
+.Menu-list{
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 40%;
+}
+
+.Menu-Container{
+  display:flex ;
+  padding: 2px 8px;
+  align-items: center;
+}
+
+.Menu-Checkbox{
+  width: 16px;
+  height: 16px;
 }

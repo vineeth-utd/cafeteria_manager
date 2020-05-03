@@ -18,6 +18,7 @@ class OrdersController < ApplicationController
       redirect_to menu_items_path
     else
       order.status = "delivered"
+      order.delivered_at = DateTime.now + (5.5 / 24)
       order.save!
       redirect_to pending_orders_path
     end

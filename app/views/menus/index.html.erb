@@ -1,5 +1,5 @@
 <% if @current_user.role == "Manager" %>
-  <h1 class=MenuPage-title>List Of Menus</h1>
+  <h1 class="MenuPage-title">List Of Menus</h1>
   <section class="AddMenu">
     <%= form_with url: menus_path, class: "AddMenu" do |form| %>
       <%= form.text_field :name, class: "AddMenu-text", placeholder: "Any new Menu?" %>
@@ -12,11 +12,14 @@
       <% Menu.all.each do |menu| %>
         <label class="Menu-Container">
           <%= form_with(url: "/menus/#{menu.id}" , method: "PUT") do %>
+          <label class="Container">
             <input class="Menu-Checkbox"
               name="active_menu"
               type="checkbox" <%= menu.active_menu ? "checked" : "" %>
               onclick="this.form.submit()"
             >
+            <span class="Checkmark"></span>
+          </label>
           <% end %>
 
           <p class="Menu-name"> <%= menu.name %> </p>

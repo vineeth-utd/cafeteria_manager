@@ -26,9 +26,11 @@ class Order < ActiveRecord::Base
     end
   end
 
-  def order_status
+  def status_tostring
     if status == "delivered"
-      "Delivered at "
+      if delivered_at
+        "Delivered on #{delivered_at.strftime("%-d %b,%Y")} at #{delivered_at.strftime("%I:%M %P")}"
+      end
     elsif status == "being_created"
       "Being Created"
     else

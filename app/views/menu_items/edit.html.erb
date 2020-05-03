@@ -25,7 +25,7 @@
         %>
 
         <select name="category" class="AddMenuItem-text" placeholder="Category">
-          <option value=""> <%= @menuitem.category %> </option>
+          <option value= <%= @menuitem.category %> > <%= @menuitem.category %> </option>
           <% @categories.each do |category| %>
             <option value = <%= category %> > <%= category %> </option>
           <% end %>

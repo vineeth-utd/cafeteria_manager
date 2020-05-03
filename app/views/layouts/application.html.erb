@@ -29,7 +29,7 @@
           </li>
 
           <li>
-            <% if @current_user.role == "Manager" %>
+            <% unless @current_user.role == "User"  %>
               <%= link_to "Pending", pending_orders_path, class: "nav-link" %>
             <% end %>
           </li>
@@ -39,14 +39,16 @@
           </li>
 
           <li>
-            <% if @current_user.role == "Manager" %>
-              <%= link_to "Users", users_path, class: "nav-link" %>
+            <% if @current_user.role == "User" %>
+              <%= link_to "My Cart", new_order_path, class: "nav-link" %>
+            <% else %>
+              <%= link_to "Offline Cart", new_order_path, class: "nav-link" %>
             <% end %>
           </li>
 
           <li>
-            <% if @current_user.role == "User" %>
-              <%= link_to "My Cart", new_order_path, class: "nav-link" %>
+            <% if @current_user.role == "Manager" %>
+              <%= link_to "Users", users_path, class: "nav-link" %>
             <% end %>
           </li>
 

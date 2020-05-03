@@ -8,9 +8,7 @@ class MenusController < ApplicationController
 
   def create
     menu = Menu.create!(name: params[:name], active_menu: false)
-    #session[:current_menu_id] = menu.id
     redirect_to menus_path
-    #@current_menu = Menu.find(current_menu_id)
   end
 
   def update
