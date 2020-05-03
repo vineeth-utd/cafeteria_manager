@@ -83,10 +83,11 @@ body{
   margin: 2.5px;
   padding: 2.5px;
   font-size: 15px;
+  color: whitesmoke;
 }
 
 .nav-links{
-  display: flex;
+  /*display: flex;*/
   margin-left: auto;
 }
 
@@ -125,4 +126,8 @@ body{
 .Dashboard-list{
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+.collapse navbar-collapse{
+  float: right;
 }
