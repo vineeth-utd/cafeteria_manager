@@ -2,32 +2,51 @@ body{
   text-align: center;
 }
 
+.MenuItemPage-title{
+  /*font-size: 25px;*/
+  font-size: 7vh;
+  /*margin-bottom: 30px;*/
+  margin-bottom: 7vh;
+  /*margin-top: 30px;*/
+  margin-top: 6vh;
+  /*margin-left: 90px;*/
+}
+
 .AddMenuItem{
-  height: 32px;
+  /*height: 32px;*/
+  height: 11vh;
   align-items: stretch;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
+  margin-bottom: 10vh;
 }
 
 .AddMenuItem-text{
   padding: 6px 12px;
-  font-size: 14px;
+  /*font-size: 14px;*/
+  font-size: 3vh;
   color: #453C52;
-  margin-right: 10px;
+  /*margin-right: 10px;*/
+  margin-right: 2.5vw;
   border-radius: 4px;
   border: 1px solid #BFB8CC;
+  border-bottom: 7vh;
 }
 
 .AddMenuItem-price{
   padding: 6px 12px;
-  font-size: 14px;
+  /*font-size: 14px;*/
+  font-size: 3vh;
   color: #453C52;
-  margin-right: 10px;
+  /*margin-right: 10px;*/
+  margin-right: 2.5vw;
   border-radius: 4px;
   border: 1px solid #BFB8CC;
+  border-bottom: 7vh;
 }
 
 .AddMenuItem-button{
-  font-size: 14px;
+  /*font-size: 14px;*/
+  font-size: 3vh;
   color: white;
   background-color: #488878;
   border: 1px solid transparent;
@@ -35,17 +54,11 @@ body{
   border-radius: 4px;
 }
 
-.MenuItemPage-title{
-  font-size: 25px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  margin-left: 100px;
-}
-
 .MenuItem-section{
   display: flex;
-  margin-bottom: 30px;
-  margin-left: 30px;
+  /*margin-bottom: 30px;*/
+  margin-bottom: 10vh;
+  /*margin-left: 30px;*/
 }
 
 .MenuItem-container{
@@ -55,18 +68,22 @@ body{
 }
 
 .MenuItem-icon{
-  margin-left: 10px;
+  /*margin-left: 10px;*/
+  margin-left: 2vw;
   visibility: hidden;
 }
 
 .AddItemCart-button{
-  font-size: 14px;
+  /*font-size: 14px;*/
+  font-size: 3.5vh;
   color: white;
   background-color: #488878;
   border: 1px solid transparent;
-  padding: 6px 22px;
+  /*padding: 6px 22px;*/
+  padding: 1.2vh 2.5vw;
   border-radius: 4px;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
+  margin-left: 2.5vw;
 }
 
 .MenuItem-container:hover{
@@ -76,30 +93,39 @@ body{
 .MenuItem-container:hover > .MenuItem-icon{
   visibility: visible;
   height: 15px;
+  /*height: 4.88vh;*/
   width: 15px;
+  /*width: 4.16vw;*/
 }
 
 .Category-title{
   /*float: left;*/
   /*display: flex;*/
   color: #453C52;
-  align-items: center;
-  margin-bottom: 15px;
-  font-size: 20px;
+  /*align-items: center;*/
+  /*margin-bottom: 15px;*/
+  margin-bottom: 4.5vh;
+  /*font-size: 20px;*/
+  font-size: 6.5vh;
   font-weight: 600;
   /*line-height: 1.4;*/
 }
 
 .Category-section{
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  margin-bottom: 6vh;
   /*float: left;*/
 }
 
 .MenuItemList-text{
-  font-size: 18px;
+  /*font-size: 18px;*/
+  font-size: 4vh;
+  margin: 2vh 2vw;
 }
 
 .WalkIn-title{
-  font-size: 20px;
-  margin-bottom: 20px;
+  /*font-size: 20px;*/
+  font-size: 5vh;
+  /*margin-bottom: 20px;*/
+  margin-bottom: 7vh;
 }

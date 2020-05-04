@@ -2,7 +2,7 @@
 <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
 
 <% if @current_user.role == "Manager" %>
- <section class="MenuItem-section">
+  <section class="MenuItem-section">
     <section class="AddMenuItem">
       <%= form_with url: menu_items_path, method: "POST" do |form| %>
         <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
