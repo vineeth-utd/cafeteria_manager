@@ -3,50 +3,52 @@ body{
 }
 
 .MenuItemPage-title{
-  /*font-size: 25px;*/
-  font-size: 7vh;
-  /*margin-bottom: 30px;*/
-  margin-bottom: 7vh;
-  /*margin-top: 30px;*/
-  margin-top: 6vh;
+  font-size: 25px;
+  /*font-size: 7vh;*/
+  margin-bottom: 30px;
+  /*margin-bottom: 7vh;*/
+  margin-top: 30px;
+  /*margin-top: 6vh;*/
   /*margin-left: 90px;*/
 }
 
 .AddMenuItem{
-  /*height: 32px;*/
-  height: 11vh;
+  height: 32px;
+  /*height: 11vh;*/
   align-items: stretch;
-  /*margin-bottom: 30px;*/
-  margin-bottom: 10vh;
+  margin-bottom: 30px;
+  /*margin-bottom: 10vh;*/
 }
 
 .AddMenuItem-text{
   padding: 6px 12px;
-  /*font-size: 14px;*/
-  font-size: 3vh;
+  font-size: 14px;
+  /*font-size: 3vh;*/
   color: #453C52;
-  /*margin-right: 10px;*/
-  margin-right: 2.5vw;
+  margin-right: 10px;
+  /*margin-right: 2.5vw;*/
   border-radius: 4px;
   border: 1px solid #BFB8CC;
-  border-bottom: 7vh;
+  /*border-bottom: 7vh;*/
+  border-bottom: 32px;
 }
 
 .AddMenuItem-price{
   padding: 6px 12px;
-  /*font-size: 14px;*/
-  font-size: 3vh;
+  font-size: 14px;
+  /*font-size: 3vh;*/
   color: #453C52;
-  /*margin-right: 10px;*/
-  margin-right: 2.5vw;
+  margin-right: 10px;
+  /*margin-right: 2.5vw;*/
   border-radius: 4px;
   border: 1px solid #BFB8CC;
-  border-bottom: 7vh;
+  /*border-bottom: 7vh;*/
+  border-bottom: 32px;
 }
 
 .AddMenuItem-button{
-  /*font-size: 14px;*/
-  font-size: 3vh;
+  font-size: 14px;
+  /*font-size: 3vh;*/
   color: white;
   background-color: #488878;
   border: 1px solid transparent;
@@ -56,8 +58,8 @@ body{
 
 .MenuItem-section{
   display: flex;
-  /*margin-bottom: 30px;*/
-  margin-bottom: 10vh;
+  margin-bottom: 30px;
+  /*margin-bottom: 10vh;*/
   /*margin-left: 30px;*/
 }
 
@@ -68,22 +70,22 @@ body{
 }
 
 .MenuItem-icon{
-  /*margin-left: 10px;*/
-  margin-left: 2vw;
+  margin-left: 10px;
+  /*margin-left: 2vw;*/
   visibility: hidden;
 }
 
 .AddItemCart-button{
-  /*font-size: 14px;*/
-  font-size: 3.5vh;
+  font-size: 14px;
+  /*font-size: 3.5vh;*/
   color: white;
   background-color: #488878;
   border: 1px solid transparent;
-  /*padding: 6px 22px;*/
-  padding: 1.2vh 2.5vw;
+  padding: 6px 22px;
+  /*padding: 1.2vh 2.5vw;*/
   border-radius: 4px;
-  /*margin-left: 10px;*/
-  margin-left: 2.5vw;
+  margin-left: 10px;
+  /*margin-left: 2.5vw;*/
 }
 
 .MenuItem-container:hover{
@@ -99,33 +101,112 @@ body{
 }
 
 .Category-title{
-  /*float: left;*/
-  /*display: flex;*/
   color: #453C52;
-  /*align-items: center;*/
-  /*margin-bottom: 15px;*/
-  margin-bottom: 4.5vh;
-  /*font-size: 20px;*/
-  font-size: 6.5vh;
+  margin-bottom: 15px;
+  /*margin-bottom: 4.5vh;*/
+  font-size: 20px;
+  /*font-size: 6.5vh;*/
   font-weight: 600;
-  /*line-height: 1.4;*/
 }
 
 .Category-section{
-  /*margin-bottom: 20px;*/
-  margin-bottom: 6vh;
+  margin-bottom: 20px;
+  /*margin-bottom: 6vh;*/
   /*float: left;*/
 }
 
 .MenuItemList-text{
-  /*font-size: 18px;*/
-  font-size: 4vh;
+  font-size: 18px;
+  /*font-size: 4vh;*/
   margin: 2vh 2vw;
 }
 
 .WalkIn-title{
-  /*font-size: 20px;*/
-  font-size: 5vh;
-  /*margin-bottom: 20px;*/
-  margin-bottom: 7vh;
+  font-size: 20px;
+  /*font-size: 5vh;*/
+  margin-bottom: 20px;
+  /*margin-bottom: 7vh;*/
+}
+
+@media only screen and (max-width: 480px) {
+  .MenuItemPage-title{
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .AddMenuItem{
+    height: 32px;
+    margin-bottom: 30px;
+  }
+
+  .AddMenuItem-text{
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-right: 5px;
+    border-radius: 2px;
+    border-bottom: 32px;
+  }
+
+  .AddMenuItem-price{
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-right: 5px;
+    border-radius: 2px;
+    border-bottom: 32px;
+  }
+
+  .AddMenuItem-button{
+    font-size: 12px;
+    padding: 6px 22px;
+    border-radius: 2px;
+  }
+
+  .MenuItem-section{
+    margin-bottom: 60px;
+  }
+
+  .MenuItem-icon{
+    margin-left: 6px;
+  }
+
+  .AddItemCart-button{
+    font-size: 12px;
+    padding: 6px 22px;
+    border-radius: 2px;
+    margin-left: 5px;
+    float: right;
+  }
+
+  .WalkIn-title{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .Category-title{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .Category-section{
+    margin-bottom: 20px;
+  }
+
+  .MenuItemList-text{
+    font-size: 15px;
+    margin: 7px;
+    float: left;
+  }
+
+  .MenuItem-icon{
+    margin-left: 5px;
+    visibility: hidden;
+  }
+
+  .MenuItem-container:hover > .MenuItem-icon{
+    visibility: visible;
+    height: 10px;
+    width: 10px;
+  }
 }

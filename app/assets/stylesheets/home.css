@@ -29,22 +29,25 @@ body{
 }*/
 
 .Home-title{
-  font-size: 8vh;
-  margin-bottom: 15vh;
-  margin-top: 25vh;
+  font-size: 36px;
+  /*font-size: 8vh;*/
+  margin-bottom: 72px;
+  /*margin-bottom: 15vh;*/
+  margin-top: 72px;
+  /*margin-top: 25vh;*/
   /*color: whitesmoke;*/
   color: black;
 }
 
 .Home-authenticate{
-  /*font-size: 16px;*/
-  font-size: 3.9vh;
+  font-size: 16px;
+  /*font-size: 3.9vh;*/
   margin-bottom: 4.8vh;
 }
 
 .Home-links{
-  /*font-size: 16px;*/
-  font-size: 3.9vh;
+  font-size: 16px;
+  /*font-size: 3.9vh;*/
   box-sizing: border-box;
   display: inline-block;
   height: 12vh;
@@ -72,19 +75,22 @@ body{
   font-size: 16px;
 }
 
-.MyCart-link{
+/*.MyCart-link{
   float: right;
   margin-right: 10px;
   padding: 10px;
   background-color: lightgray;
   font-size: 14px;
   margin-bottom: 10px;
-}
+}*/
 
 .Welcome-text{
   margin: 2.5px;
   padding: 2.5px;
   font-size: 15px;
+  /*margin: 0.5vh 0.2vw;
+  padding: 0.5vh 0.2vw;
+  font-size: 2vh;*/
   color: whitesmoke;
 }
 
@@ -94,12 +100,12 @@ body{
 }
 
 .nav-link{
-  /*margin: 5px;*/
-  margin: 1vw 1vh;
-  /*padding: 5px;*/
-  padding: 1.2vw 1.1vh;
-  /*font-size: 13px;*/
-  font-size: 3.14vh;
+  margin: 5px;
+  /*margin: 1vw 1vh;*/
+  padding: 5px;
+  /*padding: 1.2vw 1.1vh;*/
+  font-size: 13px;
+  /*font-size: 3.14vh;*/
   box-sizing: border-box;
   display: inline-block;
   color: #FFFFFF;
@@ -112,6 +118,6 @@ body{
   float: right;
 }*/
 
-/*@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 
-}*/
+}

@@ -3,7 +3,7 @@
 }
 
 .Cart-title{
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .Emptycart-text{
@@ -12,11 +12,12 @@
 }
 
 .Cart-content{
-  margin-top: 18px;
+  margin-top: 30px;
+  font-size: 20px;
 }
 
 .CartRemove-link{
-
+  font-size: 18px;
 }
 
 .PlaceOrder-button{
@@ -66,4 +67,28 @@
   margin-top: 15px;
   margin-bottom: 20px;
   color: rgb(0, 128, 79);
+}
+
+@media only screen and (max-width: 480px) {
+  .Cart-title{
+    font-size: 25px;
+  }
+
+  .Emptycart-text{
+    font-size: 17px;
+  }
+
+  .PlaceOrder-button{
+    font-size: 12px;
+    border-radius: 2px;
+  }
+
+  .Cart-content{
+    margin-top: 35px;
+    font-size: 17px;
+  }
+
+  .CartRemove-link{
+    font-size: 15px;
+  }
 }

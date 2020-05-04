@@ -2,9 +2,6 @@ body{
   text-align: center;
 }
 
-
-
-.About-section{
-  display: inline-block;
-  /*overflow: auto;*/
+.About-title{
+  font-size: 8vh;
 }
