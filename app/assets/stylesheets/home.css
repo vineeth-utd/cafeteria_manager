@@ -1,33 +1,7 @@
-/*html {
-  background: url('cafeteria_background1.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}*/
-
 body{
   text-align: center;
-  /*background: linear-gradient(to right, #ffafbd 0%, #ffc3a0 100%);*/
+  background: linear-gradient(to right, #ffafbd 0%, #ffc3a0 100%);
 }
-
-/*.Hero{
-  background: url('cafeteria_background1.jpg') no-repeat center center fixed;
-  opacity: 0.5;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}*/
-
-/*.Hero{
-  -khtml-opacity: .50;
-  -moz-opacity: .50;
-  -ms-filter: "alpha(opacity=.50)";
-  filter: alpha(opacity=50);
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
-  opacity: .50;
-}*/
 
 .Home-title{
   font-size: 36px;
