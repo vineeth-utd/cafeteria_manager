@@ -22,11 +22,13 @@
   <h2 class="WalkIn-title">Walk-In Customer</h2>
 <% end %>
 
-<%= render partial: "menulist", locals: {category: "Starters", menus: menu} %>
+<!--<%= render partial: "menulist", locals: {category: "Starters", menus: menu} %>
 <%= render partial: "menulist", locals: {category: "Side Dishes", menus: menu} %>
 <%= render partial: "menulist", locals: {category: "Main Course", menus: menu} %>
-<%= render partial: "menulist", locals: {category: "Desserts", menus: menu} %>
+<%= render partial: "menulist", locals: {category: "Desserts", menus: menu} %>-->
 
-<!--<% @categories.each do |category| %>
+
+
+<% @categories.each do |category| %>
   <%= render partial: "menulist", locals: {category: category, menus: menu} %>
-<% end %>-->
+<% end %>
