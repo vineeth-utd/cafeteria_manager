@@ -8,6 +8,7 @@
 
 body{
   text-align: center;
+  /*background: linear-gradient(to right, #ffafbd 0%, #ffc3a0 100%);*/
 }
 
 /*.Hero{
@@ -123,10 +124,6 @@ body{
   text-decoration: none;
   border-radius: 8px;
 }
-
-/*.collapse navbar-collapse{
-  float: right;
-}*/
 
 @media only screen and (max-width: 480px) {
   .Flash-error{

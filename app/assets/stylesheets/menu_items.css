@@ -16,9 +16,11 @@ body{
   height: 32px;
   /*height: 11vh;*/
   align-items: stretch;
+  margin: auto;
   margin-bottom: 30px;
   /*margin-bottom: 10vh;*/
   margin-left: 10vw;
+
 }
 
 .AddMenuItem-text{
@@ -90,6 +92,8 @@ body{
   border-radius: 4px;
   /*margin-left: 10px;*/
   /*margin-left: 2.5vw;*/
+  margin: auto;
+  margin-right: 50px;
 }
 
 .MenuItem-container:hover{
@@ -103,6 +107,7 @@ body{
   /*height: 4.88vh;*/
   width: 15px;
   /*width: 4.16vw;*/
+  margin: auto;
 }
 
 .Category-title{
@@ -123,8 +128,10 @@ body{
 .MenuItemList-text{
   font-size: 18px;
   /*font-size: 4vh;*/
-  margin: 2vh 2vw;
-  float: left;
+  /*margin: 2vh 2vw;*/
+  margin: auto;
+  margin-left: 150px;
+  /*float: left;*/
 }
 
 .WalkIn-title{
@@ -182,7 +189,7 @@ body{
     padding: 6px 22px;
     border-radius: 2px;
     margin-left: 5px;
-    float: right;
+    /*float: right;*/
   }
 
   .WalkIn-title{

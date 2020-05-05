@@ -115,12 +115,11 @@ body{
   .Menu-Container{
     padding: 2px 8px;
     margin: 6px;
-
   }
 
   .Menu-Checkbox{
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     margin-right: 5px;
   }
 

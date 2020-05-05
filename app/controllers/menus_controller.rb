@@ -27,5 +27,9 @@ class MenusController < ApplicationController
   end
 
   def destroy
+    menu = Menu.find(params[:id])
+    menu.destroy
+    flash[:notice] = "Item with ID:#{menu.id} is deleted!"
+    redirect_to menus_path
   end
 end
