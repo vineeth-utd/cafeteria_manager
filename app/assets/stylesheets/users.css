@@ -4,7 +4,7 @@ body{
 
 .NewUsers-title {
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 35px;
   color: black;
 }
 
@@ -14,6 +14,8 @@ body{
   border: 3px solid #8d3737;
   border-radius: 20px;
   box-shadow: 2px 2px 20px;
+  /*background: linear-gradient(to top right, #ccff66 0%, #00ffcc 100%);*/
+  background: white;
 }
 
 .Usersnew{
@@ -41,8 +43,8 @@ body{
 }
 
 .UserList-title{
-  margin-bottom: 40px;
-  margin-top: 20px;
+  margin-bottom: 35px;
+  margin-top: 25px;
   font-size: 40px;
   font-family: sans-serif;
 }

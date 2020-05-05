@@ -7,9 +7,14 @@ class MenusController < ApplicationController
   end
 
   def create
-    menu = Menu.create!(name: params[:name], active_menu: false)
-    flash[:notice] = "New menu is created!"
-    redirect_to menus_path
+    menu = Menu.new(name: params[:name], active_menu: false)
+    if menu.save
+      flash[:notice] = "New menu is created!"
+      redirect_to menus_path
+    else
+      flash[:error] = menu.errors.full_messages.join(", ")
+      redirect_to menus_path
+    end
   end
 
   def update
@@ -22,7 +27,7 @@ class MenusController < ApplicationController
       menu.active_menu = true
     end
     menu.save!
-    flash[:notice] = "#{menu.name} is made active"
+    flash[:notice] = "#{menu.name} is made active!"
     redirect_to menus_path
   end
 

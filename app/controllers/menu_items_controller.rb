@@ -21,6 +21,9 @@ class MenuItemsController < ApplicationController
     if menu_item.save
       flash[:notice] = "New item is created successfully!"
       redirect_to menu_items_path
+    else
+      flash[:error] = menu_item.errors.full_messages.join(", ")
+      redirect_to menu_items_path
     end
   end
 
