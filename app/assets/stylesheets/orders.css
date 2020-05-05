@@ -21,41 +21,47 @@
 }
 
 .PlaceOrder-button{
-  margin-top: 20px;
+  margin-top: 18px;
   font-size: 14px;
   color: white;
-  background-color: #488878;
+  background: linear-gradient(to right, #009999 0%, #336699 100%);
+  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
 }
 
 .Order-title{
- font-size: 30px;
+ font-size: 40px;
 }
 
 .OrderItem-section{
   border: 1px solid transparent;
-  background-color: whitesmoke;
+  /*background: linear-gradient(to bottom right, #ffffff 0%, #66ffff 100%);*/
+  background: linear-gradient(to bottom right, #99ffcc 0%, #66ffff 100%);
+  /*background-color: rgb(247, 215, 215);*/
   margin-top: 20px;
 }
 
 .OrderId-text{
   font-size: 20px;
   margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 .Ordered-by{
   color: rgb(53, 132, 184);
+  font-size: 18px;
 }
 
 .OrderItem-content{
- margin-top: 23px;
+  margin-top: 23px;
 }
 
 .Order-text{
   margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .Total-price{
@@ -67,6 +73,7 @@
   margin-top: 15px;
   margin-bottom: 20px;
   color: rgb(0, 128, 79);
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -90,5 +97,49 @@
 
   .CartRemove-link{
     font-size: 15px;
+  }
+
+  .PlaceOrder-button{
+    font-size: 12px;
+    padding: 6px 22px;
+    border-radius: 2px;
+  }
+
+  .Order-title{
+    font-size: 25px;
+  }
+
+  .OrderItem-section{
+    margin-top: 15px;
+  }
+
+  .OrderId-text{
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .Ordered-by{
+    font-size: 12px;
+  }
+
+  .OrderItem-content{
+    margin-top: 18px;
+  }
+
+  .Order-text{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-size: 13px;
+  }
+
+  .Total-price{
+    margin-top: 15px;
+    font-size: 17px;
+  }
+
+  .Order-status{
+    margin-top: 12px;
+    margin-bottom: 17px;
+    font-size: 12px;
   }
 }

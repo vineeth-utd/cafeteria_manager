@@ -18,6 +18,7 @@ body{
   align-items: stretch;
   margin-bottom: 30px;
   /*margin-bottom: 10vh;*/
+  margin-left: 10vw;
 }
 
 .AddMenuItem-text{
@@ -50,7 +51,8 @@ body{
   font-size: 14px;
   /*font-size: 3vh;*/
   color: white;
-  background-color: #488878;
+  background: linear-gradient(to right, #009999 0%, #336699 100%);
+  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
@@ -72,14 +74,16 @@ body{
 .MenuItem-icon{
   margin-left: 10px;
   /*margin-left: 2vw;*/
-  visibility: hidden;
+  /*visibility: hidden;*/
+  display: none;
 }
 
 .AddItemCart-button{
   font-size: 14px;
   /*font-size: 3.5vh;*/
   color: white;
-  background-color: #488878;
+  background: linear-gradient(to right, #009999 0%, #336699 100%);
+  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
   /*padding: 1.2vh 2.5vw;*/
@@ -93,7 +97,8 @@ body{
 }
 
 .MenuItem-container:hover > .MenuItem-icon{
-  visibility: visible;
+  /*visibility: visible;*/
+  display: block;
   height: 15px;
   /*height: 4.88vh;*/
   width: 15px;
@@ -132,12 +137,13 @@ body{
   .MenuItemPage-title{
     font-size: 25px;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .AddMenuItem{
     height: 32px;
     margin-bottom: 30px;
+
   }
 
   .AddMenuItem-text{

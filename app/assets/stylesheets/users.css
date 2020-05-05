@@ -33,7 +33,8 @@ body{
 .Form-submit {
   font-size: 14px;
   color: white;
-  background-color: #488878;
+  background: linear-gradient(to right, #009999 0%, #336699 100%);
+  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;

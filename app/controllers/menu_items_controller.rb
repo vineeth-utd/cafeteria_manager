@@ -11,14 +11,17 @@ class MenuItemsController < ApplicationController
 
   def create
     menu = Menu.active
-    menu_item = Menuitem.create!(
+    menu_item = Menuitem.new(
       menu_id: menu.id,
       name: params[:name],
       description: params[:description],
       price: params[:price],
       category: params[:category],
     )
-    redirect_to menu_items_path
+    if menu_item.save
+      flash[:notice] = "New item is created successfully!"
+      redirect_to menu_items_path
+    end
   end
 
   def update
@@ -31,12 +34,14 @@ class MenuItemsController < ApplicationController
       price: params[:price],
       category: params[:category],
     )
+    flash[:notice] = "Item with ID:#{menuitem.id} is updated successfully!"
     redirect_to menu_items_path
   end
 
   def destroy
     menuitem = Menuitem.find(params[:id])
     menuitem.destroy
+    flash[:notice] = "Item with ID:#{menuitem.id} is deleted!"
     redirect_to menu_items_path
   end
 end

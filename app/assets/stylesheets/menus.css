@@ -34,7 +34,8 @@ body{
   font-size: 14px;
   /*font-size: 3vh;*/
   color: white;
-  background-color: #488878;
+  background: linear-gradient(to right, #009999 0%, #336699 100%);
+  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
@@ -53,8 +54,8 @@ body{
   padding: 2px 8px;
   margin: 12px;
   /*margin: 2.5vh;*/
-  margin-left: 308px;
-  /*margin-left: 25vw;*/
+  /*margin-left: 550px;*/
+  margin-left: 43vw;
   /*align-items: center;*/
 }
 
@@ -65,6 +66,20 @@ body{
   /*height: 5vh;*/
 }
 
+.Menu-icon{
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+.Menu-Container:hover{
+  background-color: #F1EDF7;
+}
+
+.Menu-Container:hover > .Menu-icon{
+  visibility: visible;
+  height: 13px;
+  width: 13px;
+}
 
 @media only screen and (max-width: 480px) {
   .MenuPage-title{
@@ -100,7 +115,7 @@ body{
   .Menu-Container{
     padding: 2px 8px;
     margin: 6px;
-    margin-left: 55px;
+
   }
 
   .Menu-Checkbox{
@@ -109,4 +124,7 @@ body{
     margin-right: 5px;
   }
 
+  .Menu-icon{
+    margin-left: 6px;
+  }
 }

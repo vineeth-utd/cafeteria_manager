@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
     if order.status == "being_created"
       order.status = "order_confirmed"
       order.save!
+      flash[:notice] = "Your order with ID:#{order.id} is confirmed!"
       redirect_to menu_items_path
     else
       order.status = "delivered"

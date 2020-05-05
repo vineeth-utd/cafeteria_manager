@@ -12,17 +12,18 @@
       <% Menu.all.each do |menu| %>
         <label class="Menu-Container">
           <%= form_with(url: "/menus/#{menu.id}" , method: "PUT") do %>
-          <label class="Container">
             <input class="Menu-Checkbox"
               name="active_menu"
               type="checkbox" <%= menu.active_menu ? "checked" : "" %>
               onclick="this.form.submit()"
             >
-            <span class="Checkmark"></span>
-          </label>
           <% end %>
 
           <p class="Menu-name"> <%= menu.name %> </p>
+
+          <%= form_with(url: "/menus/#{menu.id}" , method: "DELETE", class: "Menu-icon") do %>
+            <input type="image" src="assets/delete-24px.svg" >
+          <% end %>
         </label>
       <% end %>
     </li>
