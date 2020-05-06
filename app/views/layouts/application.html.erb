@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CafeteriaManager</title>
+    <title>Cafeteria Manager</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -19,6 +19,7 @@
   <body>
     <% if @current_user %>
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!--<img src="assets/logo1.jpg" width="45" alt="" class="d-inline-block align-middle mr-2">-->
         <a class="navbar-brand" href="#" style="margin-right: 50px">Cafeteria Management</a>
         <h2 class="Welcome-text">Welcome <%= @current_user.first_name %>!</h2>
         <section class="nav-links">

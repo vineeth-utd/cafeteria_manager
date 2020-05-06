@@ -1,7 +1,7 @@
 class MenuItemsController < ApplicationController
   def index
     @categories = Menuitem.distinct.pluck(:category)
-    @categories.sort!
+    #@categories.sort!
     render "index"
   end
 
