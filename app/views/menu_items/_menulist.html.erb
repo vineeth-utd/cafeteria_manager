@@ -9,8 +9,6 @@
             <p class="MenuItemList-text"> <%= menuitem.name %> - <%= menuitem.price %>Rs </p>
 
             <% if @current_user.role == "Manager" %>
-
-
               <%= link_to edit_menu_path(id: menuitem.id), class: "MenuItem-icon"  do %>
                 <%= image_tag "edit-solid.svg"%>
               <% end %>
