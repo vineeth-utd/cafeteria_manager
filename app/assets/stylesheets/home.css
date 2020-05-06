@@ -25,12 +25,14 @@ body{
   /*font-size: 3.9vh;*/
   box-sizing: border-box;
   display: inline-block;
-  height: 12vh;
+  /*height: 12vh;*/
   color: #06425C;
-  /*background-color: #FFFFFF;*/
+  background-color: #FFFFFF;
   text-decoration: none;
-  padding: 1% 5%;
-  margin: 1% 5% 1% 0;
+  /*padding: 1% 5%;
+  margin: 1% 5% 1% 0;*/
+  padding: 10px;
+  margin: 10px;
   border-radius: 25px;
 }
 
