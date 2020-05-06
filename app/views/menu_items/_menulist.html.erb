@@ -10,11 +10,11 @@
 
             <% if @current_user.role == "Manager" %>
               <%= form_with(url: edit_menu_item_path(id: menuitem.id), method: "GET", class: "MenuItem-icon", local: true) do %>
-                <input type="image" src="assets/edit-solid.svg" value='' >
+                <input type="image" src="assets/edit-solid.svg">
               <% end %>
 
               <%= form_with(url: "/menu_items/#{menuitem.id}" , method: "DELETE", class: "MenuItem-icon") do %>
-                <input type="image" src="assets/delete-24px.svg" value='' >
+                <input type="image" src="assets/delete-24px.svg">
               <% end %>
             <% end %>
 
