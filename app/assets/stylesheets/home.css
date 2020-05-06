@@ -101,7 +101,6 @@ body{
   border-radius: 8px;
 }
 
-
 @media only screen and (max-width: 480px) {
   .Flash-error{
     margin-bottom: 15px;

@@ -71,6 +71,7 @@ body{
   display: flex ;
   padding: 2px 8px;
   align-items: center;
+  margin: auto;
 }
 
 .MenuItem-icon{
