@@ -18,11 +18,11 @@
               <% end %>-->
 
               <%= link_to edit_menu_path(id: menuitem.id) do %>
-                <%= image_tag "assets/edit-solid.svg", class: "MenuItem-icon" %>
+                <%= image_tag "edit-solid.svg", class: "MenuItem-icon" %>
               <% end %>
 
               <%= link_to "/menuitems/#{menuitem.id}", method: "DELETE" do %>
-                <%= image_tag "assets/delete-24px.svg", class: "MenuItem-icon" %>
+                <%= image_tag "delete-24px.svg", class: "MenuItem-icon" %>
               <% end %>
             <% end %>
 
