@@ -19,10 +19,10 @@
   <body>
     <% if @current_user %>
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-
-        <a class="navbar-brand" href="#" style="margin-right: 50px">
-          <%= image_tag "icons8-school-cafeteria-50-2.png" %> Cafeteria Management
+        <a href="#" class="pull-left" style="margin: auto;">
+          <%= image_tag "icons8-school-cafeteria-50-2.png" %>
         </a>
+        <a class="navbar-brand" href="#" style="margin-right: 50px">Cafeteria Management</a>
         <h2 class="Welcome-text">Welcome <%= @current_user.first_name %>!</h2>
         <section class="nav-links">
           <button
