@@ -78,7 +78,7 @@ body{
   /*margin-right: 10px;*/
   /*margin-left: 2vw;*/
   /*visibility: hidden;*/
-  /*margin: auto;*/
+  margin: auto;
   display: none;
 }
 
@@ -102,7 +102,7 @@ body{
   border-radius: 4px;
   /*margin-left: 10px;*/
   /*margin-left: 2.5vw;*/
-  /*margin: auto;*/
+  margin: auto;
   margin-right: 50px;
 }
 
@@ -138,7 +138,7 @@ body{
   font-size: 18px;
   /*font-size: 4vh;*/
   /*margin: 2vh 2vw;*/
-  /*margin: auto;*/
+  margin: auto;
   margin-left: 125px;
   /*float: left;*/
 }
