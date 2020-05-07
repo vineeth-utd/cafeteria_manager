@@ -90,10 +90,11 @@
 }
 
 .OrderItem-section{
+  width: 80%;
   border: 1px solid transparent;
   /*background: linear-gradient(to bottom right, #ffffff 0%, #66ffff 100%);*/
   background-color: rgb(240, 205, 205);
-  margin-top: 20px;
+  margin: 10px auto;
 }
 
 .OrderId-text{
@@ -109,12 +110,23 @@
 
 .OrderItem-content{
   margin-top: 23px;
+  padding: 10px;
+}
+
+.OrderItem-content ul{
+  margin: 0 auto;
+  width: 70%;
 }
 
 .Order-text{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 20px;
+  padding: 5px;
+  font-size: 17px;
+  display: flex;
+}
+
+.total-price{
+  margin-left: auto;
+  padding: 5px;
 }
 
 .Total-price{
@@ -201,7 +213,8 @@
   }
 
   .OrderItem-section{
-    margin-top: 15px;
+    width: 100%;
+    margin: 5px auto;
   }
 
   .OrderId-text{
@@ -217,10 +230,17 @@
     margin-top: 18px;
   }
 
+  .OrderItem-content ul{
+    width: 80%;
+  }
+
   .Order-text{
-    margin-top: 3px;
-    margin-bottom: 3px;
+    padding: 3px;
     font-size: 13px;
+  }
+
+  .total-price{
+    padding: 3px;
   }
 
   .Total-price{

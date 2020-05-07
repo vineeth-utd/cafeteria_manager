@@ -14,7 +14,10 @@
       <ul>
         <% order.orderitems.each do |orderitem| %>
           <li class="Order-text">
-            <%= orderitem.menu_item_name %> - <%= orderitem.menu_item_price %>
+            <span> <%= orderitem.menu_item_name %> x <%= orderitem.qty %> </span>
+            <p class="total-price">
+              <%= orderitem.menu_item_price*orderitem.qty %> Rs.
+            </p>
           </li>
         <% end %>
       </ul>
