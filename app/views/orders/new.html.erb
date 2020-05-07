@@ -5,24 +5,40 @@
 <% end %>
 
 
-  <% order = @current_user.orders.being_created %>
-  <% if order == nil || order.totalprice == 0%>
-    <h6 class="Emptycart-text">Cart is empty!</h6>
-  <% else %>
+<% order = @current_user.orders.being_created %>
+<% if order == nil || order.totalprice == 0%>
+  <h6 class="Emptycart-text">Cart is empty!</h6>
+<% else %>
+  <section class="Cart-section">
+    <p class="Cart-heading">
+      <span>Item Name</span>
+      <span class="Cart-price">Price</span>
+    </p>
     <ul>
-      <li>
-        <% Orderitem.all.each do |orderitem| %>
+      <% Orderitem.all.each do |orderitem| %>
+        <li class="Cart-content">
           <% if orderitem.order_id == order.id %>
-            <p class="Cart-content">
-              <%= orderitem.menu_item_name %> <%= orderitem.menu_item_price %>
+            <span> <%= orderitem.menu_item_name %> </span>
+            <span class="Cart-price">
+              <p class="Cart-update">
+                <%= link_to "-  ", "/order_items/#{orderitem.id}?symbol=0", method: "PATCH", class: "CartUpdate-link"  %>
+                <%= orderitem.qty %>
+                <%= link_to  "  +", "/order_items/#{orderitem.id}?symbol=1", method: "PATCH", class: "CartUpdate-link" %>
+              </p>
+              <p class="qty-price">
+                <%= orderitem.menu_item_price*orderitem.qty %>Rs.
+              </p>
+            </span>
+            <span>
               <%= link_to "Remove",
                 "/order_items/#{orderitem.id}",
                 method: "DELETE",
                 class: "CartRemove-link"
               %>
-            </p>
+            </span>
           <% end %>
-        <% end %>
+        </li>
+      <% end %>
       </li>
     </ul>
 
@@ -33,4 +49,5 @@
         <%= form.submit "Place Order", class: "PlaceOrder-button" %>
       <% end %>
     </section>
-  <% end %>
+  </section>
+<% end %>

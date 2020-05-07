@@ -15,6 +15,7 @@ class OrderItemsController < ApplicationController
       menu_item_id: menu_item.id,
       menu_item_name: menu_item.name,
       menu_item_price: menu_item.price,
+      qty: params[:qty],
     )
     if order_item.save
       if @current_user.role == "User"
@@ -24,6 +25,20 @@ class OrderItemsController < ApplicationController
       end
       redirect_to menu_items_path
     end
+  end
+
+  def update
+    orderitem = Orderitem.find(params[:id])
+    symbol = params[:symbol]
+    symbol = symbol.to_i
+    if symbol == 1
+      orderitem.qty = orderitem.qty + 1
+    end
+    if symbol == 0
+      orderitem.qty = orderitem.qty - 1
+    end
+    orderitem.save!
+    redirect_to new_order_path
   end
 
   def destroy

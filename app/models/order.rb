@@ -40,7 +40,7 @@ class Order < ActiveRecord::Base
 
   def totalprice
     price = 0
-    orderitems.each { |item| price = price + item.menu_item_price }
+    orderitems.each { |item| price = price + (item.menu_item_price * item.qty) }
     price
   end
 end
