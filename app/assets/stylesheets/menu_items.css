@@ -4,21 +4,15 @@ body{
 
 .MenuItemPage-title{
   font-size: 35px;
-  /*font-size: 7vh;*/
   margin-bottom: 30px;
-  /*margin-bottom: 7vh;*/
   margin-top: 20px;
-  /*margin-top: 6vh;*/
-  /*margin-left: 90px;*/
 }
 
 .AddMenuItem{
   height: 32px;
-  /*height: 11vh;*/
   align-items: stretch;
   margin: auto;
   margin-bottom: 30px;
-  /*margin-bottom: 10vh;*/
   margin-left: 10vw;
 
 }
@@ -26,35 +20,27 @@ body{
 .AddMenuItem-text{
   padding: 6px 12px;
   font-size: 14px;
-  /*font-size: 3vh;*/
   color: #453C52;
   margin-right: 10px;
-  /*margin-right: 2.5vw;*/
   border-radius: 4px;
   border: 1px solid #BFB8CC;
-  /*border-bottom: 7vh;*/
   border-bottom: 32px;
 }
 
 .AddMenuItem-price{
   padding: 6px 12px;
   font-size: 14px;
-  /*font-size: 3vh;*/
   color: #453C52;
   margin-right: 10px;
-  /*margin-right: 2.5vw;*/
   border-radius: 4px;
   border: 1px solid #BFB8CC;
-  /*border-bottom: 7vh;*/
   border-bottom: 32px;
 }
 
 .AddMenuItem-button{
   font-size: 14px;
-  /*font-size: 3vh;*/
   color: white;
   background: linear-gradient(to right, #009999 0%, #336699 100%);
-  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
@@ -63,7 +49,6 @@ body{
 .MenuItem-section{
   display: flex;
   margin-bottom: 30px;
-  /*margin-bottom: 10vh;*/
   /*margin-left: 30px;*/
 }
 
@@ -76,8 +61,6 @@ body{
 
 .MenuItem-icon{
   /*margin-right: 10px;*/
-  /*margin-left: 2vw;*/
-  /*visibility: hidden;*/
   margin: auto;
   display: none;
 }
@@ -87,21 +70,16 @@ body{
   width: 50px;
   margin: auto;
   border: 1px solid seashell;
-  /*color: white;*/
 }
 
 .AddItemCart-button{
   font-size: 14px;
-  /*font-size: 3.5vh;*/
   color: white;
   background: linear-gradient(to right, #009999 0%, #336699 100%);
-  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
-  /*padding: 1.2vh 2.5vw;*/
   border-radius: 4px;
   /*margin-left: 10px;*/
-  /*margin-left: 2.5vw;*/
   margin: auto;
   margin-right: 50px;
 }
@@ -113,41 +91,30 @@ body{
 .MenuItem-container:hover > .MenuItem-icon{
   display: block;
   height: 15px;
-  /*height: 4.88vh;*/
   width: 15px;
-  /*width: 4.16vw;*/
   /*margin: auto;*/
 }
 
 .Category-title{
   color: #453C52;
   margin-bottom: 15px;
-  /*margin-bottom: 4.5vh;*/
   font-size: 20px;
-  /*font-size: 6.5vh;*/
   font-weight: 600;
 }
 
 .Category-section{
   margin-bottom: 20px;
-  /*margin-bottom: 6vh;*/
-  /*float: left;*/
 }
 
 .MenuItemList-text{
   font-size: 18px;
-  /*font-size: 4vh;*/
-  /*margin: 2vh 2vw;*/
   margin: auto;
   margin-left: 125px;
-  /*float: left;*/
 }
 
 .WalkIn-title{
   font-size: 20px;
-  /*font-size: 5vh;*/
   margin-bottom: 20px;
-  /*margin-bottom: 7vh;*/
 }
 
 @media only screen and (max-width: 480px) {
@@ -160,7 +127,6 @@ body{
   .AddMenuItem{
     height: 32px;
     margin-bottom: 30px;
-
   }
 
   .AddMenuItem-text{

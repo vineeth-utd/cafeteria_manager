@@ -5,32 +5,23 @@ body{
 
 .Home-title{
   font-size: 36px;
-  /*font-size: 8vh;*/
   margin-bottom: 72px;
-  /*margin-bottom: 15vh;*/
   margin-top: 72px;
-  /*margin-top: 25vh;*/
-  /*color: whitesmoke;*/
   color: black;
 }
 
 .Home-authenticate{
   font-size: 16px;
-  /*font-size: 3.9vh;*/
   margin-bottom: 4.8vh;
 }
 
 .Home-links{
   font-size: 16px;
-  /*font-size: 3.9vh;*/
   box-sizing: border-box;
   display: inline-block;
-  /*height: 12vh;*/
   color: #06425C;
   background-color: #FFFFFF;
   text-decoration: none;
-  /*padding: 1% 5%;
-  margin: 1% 5% 1% 0;*/
   padding: 10px;
   margin: 10px;
   border-radius: 25px;
@@ -47,7 +38,6 @@ body{
 
 .Flash-error{
   background: linear-gradient(to right, #cc0066 0%, #993333 100%);
-  /*background-color: rgb(233, 86, 86);*/
   color: whitesmoke;
   margin-right: 20vw;
   margin-left: 20vw;
@@ -59,7 +49,6 @@ body{
 }
 
 .Flash-notice{
-  /*background: linear-gradient(to right, #33ccff 0%, #00cc99 100%);*/
   background: linear-gradient(to right, #00cc99 0%, #009999 100%);
   color: whitesmoke;
   margin-right: 20vw;
@@ -75,9 +64,6 @@ body{
   margin: 2.5px;
   padding: 2.5px;
   font-size: 15px;
-  /*margin: 0.5vh 0.2vw;
-  padding: 0.5vh 0.2vw;
-  font-size: 2vh;*/
   color: whitesmoke;
 }
 
@@ -88,11 +74,8 @@ body{
 
 .nav-link{
   margin: 5px;
-  /*margin: 1vw 1vh;*/
   padding: 5px;
-  /*padding: 1.2vw 1.1vh;*/
   font-size: 13px;
-  /*font-size: 3.14vh;*/
   box-sizing: border-box;
   display: inline-block;
   color: #FFFFFF;

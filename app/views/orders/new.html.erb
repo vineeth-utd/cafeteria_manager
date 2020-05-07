@@ -17,7 +17,7 @@
     <ul>
       <% Orderitem.all.each do |orderitem| %>
         <li class="Cart-content">
-          <% if orderitem.order_id == order.id %>
+          <% if orderitem.order_id == order.id && orderitem.qty > 0 %>
             <span> <%= orderitem.menu_item_name %> </span>
             <span class="Cart-price">
               <p class="Cart-update">
