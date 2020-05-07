@@ -75,10 +75,19 @@ body{
 }
 
 .MenuItem-icon{
-  margin-right: 10px;
+  /*margin-right: 10px;*/
   /*margin-left: 2vw;*/
   /*visibility: hidden;*/
+  /*margin: auto;*/
   display: none;
+}
+
+.AddToCart-qty{
+  background-color: whitesmoke;
+  width: 50px;
+  /*margin: auto;*/
+  border: 1px solid seashell;
+  /*color: white;*/
 }
 
 .AddItemCart-button{
@@ -93,7 +102,7 @@ body{
   border-radius: 4px;
   /*margin-left: 10px;*/
   /*margin-left: 2.5vw;*/
-  margin: auto;
+  /*margin: auto;*/
   margin-right: 50px;
 }
 
@@ -102,13 +111,12 @@ body{
 }
 
 .MenuItem-container:hover > .MenuItem-icon{
-  /*visibility: visible;*/
   display: block;
   height: 15px;
   /*height: 4.88vh;*/
   width: 15px;
   /*width: 4.16vw;*/
-  margin: auto;
+  /*margin: auto;*/
 }
 
 .Category-title{
@@ -130,8 +138,8 @@ body{
   font-size: 18px;
   /*font-size: 4vh;*/
   /*margin: 2vh 2vw;*/
-  margin: auto;
-  margin-left: 150px;
+  /*margin: auto;*/
+  margin-left: 125px;
   /*float: left;*/
 }
 
@@ -185,9 +193,13 @@ body{
     margin-left: 6px;
   }
 
+  .AddToCart-qty{
+    /*margin: auto;*/
+  }
+
   .AddItemCart-button{
-    font-size: 12px;
-    padding: 6px 22px;
+    font-size: 11px;
+    padding: 6px 20px;
     border-radius: 2px;
     margin-left: 7px;
     margin-right: 5px;
@@ -211,8 +223,9 @@ body{
 
   .MenuItemList-text{
     font-size: 15px;
-    margin: 7px;
+    margin: 5px;
     /*float: left;*/
+    max-width: 200px;
   }
 
   .MenuItem-icon{
