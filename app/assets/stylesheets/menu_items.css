@@ -14,7 +14,6 @@ body{
   margin: auto;
   margin-bottom: 30px;
   margin-left: 10vw;
-
 }
 
 .AddMenuItem-text{
@@ -103,13 +102,17 @@ body{
 }
 
 .Category-section{
-  margin-bottom: 20px;
+  /*width: 85%;*/
+  /*margin: 10px auto;*/
+  margin-left: 150px;
+  margin-right: 50px;
+  margin-bottom: 15px;
 }
 
 .MenuItemList-text{
   font-size: 18px;
-  margin: auto;
-  margin-left: 125px;
+  margin-right: auto;
+  /*margin-left: 125px;*/
 }
 
 .WalkIn-title{
@@ -184,7 +187,8 @@ body{
   }
 
   .Category-section{
-    margin-bottom: 20px;
+    margin: auto;
+    margin-bottom: 5px auto;
   }
 
   .MenuItemList-text{
