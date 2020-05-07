@@ -1,12 +1,12 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.where(user_id: current_user.id).conf_and_del
-    @all_orders = Order.conf_and_del
+    @orders = Order.where(user_id: current_user.id).conf_and_del.order("id DESC")
+    @all_orders = Order.conf_and_del.order("id DESC")
     render "index"
   end
 
   def new
-    @orders = Order.where(user_id: current_user.id)
+    @orders = Order.where(user_id: current_user.id).order("id DESC")
     render "new"
   end
 
