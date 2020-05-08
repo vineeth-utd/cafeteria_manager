@@ -38,6 +38,9 @@ class OrderItemsController < ApplicationController
       orderitem.qty = orderitem.qty - 1
     end
     orderitem.save!
+    if orderitem.qty == 0
+      orderitem.destroy
+    end
     redirect_to new_order_path
   end
 
