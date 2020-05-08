@@ -13,12 +13,14 @@
     <section class="OrderItem-content">
       <ul>
         <% order.orderitems.each do |orderitem| %>
-          <li class="Order-text">
-            <span> <%= orderitem.menu_item_name %> x <%= orderitem.qty %> </span>
-            <p class="total-price">
-              <%= orderitem.menu_item_price*orderitem.qty %> Rs.
-            </p>
-          </li>
+          <% if orderitem.qty > 0 %>
+            <li class="Order-text">
+              <span> <%= orderitem.menu_item_name %> x <%= orderitem.qty %> </span>
+              <p class="total-price">
+                <%= orderitem.menu_item_price*orderitem.qty %> Rs.
+              </p>
+            </li>
+          <% end %>
         <% end %>
       </ul>
     </section>
