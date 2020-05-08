@@ -55,7 +55,7 @@ body{
   display: flex ;
   padding: 2px 8px;
   align-items: center;
-  margin: auto;
+  /*margin: auto;*/
 }
 
 .MenuItem-icon{
@@ -79,7 +79,7 @@ body{
   padding: 6px 22px;
   border-radius: 4px;
   /*margin-left: 10px;*/
-  margin: auto;
+  /*margin: auto;*/
   margin-right: 50px;
 }
 
@@ -113,6 +113,11 @@ body{
   font-size: 18px;
   margin-right: auto;
   /*margin-left: 125px;*/
+}
+
+.info-img{
+  height: 12px;
+  width: 12px;
 }
 
 .WalkIn-title{
