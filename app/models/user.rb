@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :orders
 
-  def is_Manager?
+  def self.is_Manager?
     if role == "Manager"
       true
     else
@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  def is_Billing_Clerk?
+  def self.is_Billing_Clerk?
     if role == "Billing-Clerk"
       true
     else
