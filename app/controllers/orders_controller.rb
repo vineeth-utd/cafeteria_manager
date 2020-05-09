@@ -26,6 +26,7 @@ class OrdersController < ApplicationController
   end
 
   def pending_orders
+    ensure_manager
     @orders = Order.get_pending_orders.order("id ASC")
     render "pending_orders"
   end

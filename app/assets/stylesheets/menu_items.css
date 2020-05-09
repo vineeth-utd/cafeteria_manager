@@ -109,6 +109,10 @@ body{
   margin-bottom: 15px;
 }
 
+.MenuItem-list{
+  margin-bottom: 20px;
+}
+
 .MenuItemList-text{
   font-size: 18px;
   margin-right: auto;
@@ -175,19 +179,6 @@ body{
     margin-left: 6px;
   }
 
-  .AddToCart-qty{
-    /*margin: auto;*/
-  }
-
-  .AddItemCart-button{
-    font-size: 11px;
-    padding: 6px 20px;
-    border-radius: 2px;
-    margin-left: auto;
-    /*margin-right: 5px;*/
-    float: right;
-  }
-
   .WalkIn-title{
     font-size: 20px;
     margin-bottom: 20px;
@@ -196,25 +187,37 @@ body{
   .Category-title{
     margin-bottom: 15px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .Category-section{
     /*margin: auto;*/
+    width: 90%;
     margin: 2px auto;
     margin-bottom: 10px;
   }
 
+  .MenuItem-container{
+    padding: 2px;
+  }
+
+  .MenuItem-list{
+    margin-bottom: 8px;
+  }
+
   .MenuItemList-text{
-    font-size: 15px;
     margin: 3px auto;
-    /*float: left;*/
+    float: left;
     max-width: 200px;
+    margin-left: 0px;
+    display: block;
     /*margin-right: auto;*/
   }
 
   .MenuItemList-name{
-    float: left;
+    /*float: left;*/
+    font-size: 15px;
+    margin-left: 0px;
   }
 
   .MenuItemList-price{
@@ -226,9 +229,35 @@ body{
     visibility: hidden;
   }
 
+  .MenuItem-container:hover > .MenuItemList-name {
+    font-size: 13px;
+  }
+
+  .MenuItem-container:hover > .MenuItemList-price {
+    font-size: 11px;
+  }
+
   .MenuItem-container:hover > .MenuItem-icon{
     visibility: visible;
     height: 17px;
     width: 17px;
+  }
+
+  .qty-price{
+    display: block;
+    margin-left: 40px;
+  }
+
+  .AddToCart-qty{
+    float: right;
+  }
+
+  .AddItemCart-button{
+    font-size: 11px;
+    padding: 6px;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: 0px;
+    float: right;
   }
 }

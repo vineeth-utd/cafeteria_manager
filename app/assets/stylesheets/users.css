@@ -56,6 +56,10 @@ body{
 }*/
 
 .UserList-section{
+  width: 50%;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: rgb(240, 205, 205);
   margin-bottom: 30px;
 }
 
@@ -66,26 +70,29 @@ body{
 }
 
 .UserList-content{
+  width: 70%;
+  margin: 20px auto;
   margin-bottom: 10px;
+  display: inline-block;
 }
 
 .User-name{
-  font-size: 17px;
+  font-size: 18px;
   color: rgb(37, 138, 91);
+  margin-right: auto;
+  float: left;
 }
 
 .User-link{
-  margin-left: 20px;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 14px;
   box-sizing: border-box;
   display: inline-block;
   color: #FFFFFF;
   background-color: rgb(8, 99, 138);
-  text-decoration: none;
-  padding: 0.7% 0.35%;
-  margin: 0.7% 0.35% 0.7% 0;
-  border-radius: 8px;
+  padding: 4px;
+  border-radius: 7px;
+  float: right;
 }
 
 
@@ -120,6 +127,13 @@ body{
     border-radius: 2px;
   }
 
+  .UserList-section{
+    width: 100%;
+    margin: 3px auto;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
   .UserList-title{
     margin-bottom: 40px;
     margin-top: 10px;
@@ -131,8 +145,18 @@ body{
     font-size: 20px;
   }
 
+  .UserList-content{
+    width: 90%;
+    margin-bottom: 5px;
+  }
+
   .User-name{
     font-size: 15px;
   }
 
+  .User-link{
+    font-size: 12px;
+    padding: 2.5px;
+    border-radius: 4px;
+  }
 }

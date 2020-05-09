@@ -28,6 +28,7 @@
               <% end %>
             <% end %>
 
+          <section class="qty-price">
             <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
               <select name="qty" class="AddToCart-qty" placeholder="Qty" required="required">
                 <option value="">Qty</option>
@@ -39,6 +40,7 @@
               </select>
               <%= form.submit "Add To Cart", class: "AddItemCart-button" %>
             <% end %>
+          </section>
           </section>
         </li>
       <% end %>

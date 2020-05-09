@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
   def index
-    before_action :ensure_manager
+    ensure_manager
     render "index"
   end
 
