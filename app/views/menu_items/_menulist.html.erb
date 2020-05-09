@@ -7,10 +7,15 @@
         <li class="MenuItem-list">
           <section class="MenuItem-container">
             <p class="MenuItemList-text">
-              <%= menuitem.name %> - <%= menuitem.price %>Rs
-              <a href="" data-toggle="tooltip" placement='top' title="<%= menuitem.description %>">
-                <%= image_tag "icons8-info-50.png", class: "info-img" %>
-              </a>
+              <span class="MenuItemList-name">
+                <%= menuitem.name %>
+              </span>
+              <span class="MenuItemList-price">
+                <%= menuitem.price %> Rs
+                <a href="" data-toggle="tooltip" placement='top' title="<%= menuitem.description %>">
+                  <%= image_tag "icons8-info-50.png", class: "info-img" %>
+                </a>
+              </span>
             </p>
 
             <% if @current_user.role == "Manager" %>
