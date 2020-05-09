@@ -16,4 +16,10 @@ class ApplicationController < ActionController::Base
       nil
     end
   end
+
+  def ensure_manager
+    unless current_user.role == "Manager"
+      redirect_to "/"
+    end
+  end
 end
