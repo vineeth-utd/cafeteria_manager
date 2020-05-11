@@ -84,6 +84,11 @@ body{
   margin-right: 50px;
 }
 
+.icons8-icon{
+  height: 20px;
+  width: 20px;
+}
+
 .MenuItem-container:hover{
   background-color: #F1EDF7;
 }
@@ -137,6 +142,13 @@ body{
 .WalkIn-title{
   font-size: 20px;
   margin-bottom: 20px;
+}
+
+.EditMenuItemPage-title{
+  font-size: 35px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  color: rgb(54, 14, 14);
 }
 
 @media only screen and (max-width: 480px) {
@@ -228,6 +240,11 @@ body{
     font-size: 13px;
   }
 
+  .icons8-icon{
+    height: 17px;
+    width: 17px;
+  }
+
   .MenuItem-icon{
     margin-right: 7px;
     visibility: hidden;
@@ -263,5 +280,11 @@ body{
     margin-left: auto;
     margin-right: 0px;
     float: right;
+  }
+
+  .EditMenuItemPage-title{
+    font-size: 25px;
+    margin-bottom: 40px;
+    margin-top: 10px;
   }
 }

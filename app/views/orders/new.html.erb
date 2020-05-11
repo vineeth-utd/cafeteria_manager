@@ -30,11 +30,9 @@
               </p>
             </span>
             <span>
-              <%= link_to "Remove",
-                "/order_items/#{orderitem.id}",
-                method: "DELETE",
-                class: "CartRemove-link"
-              %>
+              <%= link_to "/order_items/#{orderitem.id}", method: "DELETE" do %>
+                <%= image_tag "icons8-delete-bin-50.png", class: "icons8-icon" %>
+              <% end %>
             </span>
           </li>
         <% end %>

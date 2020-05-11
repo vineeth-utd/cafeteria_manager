@@ -53,6 +53,11 @@
   margin-left: 20px;
 }
 
+.icons8-icon{
+  height: 35px;
+  width: 35px;
+}
+
 .Cart-update{
   padding: 5px;
   border: 1px solid transparent;
@@ -183,6 +188,11 @@
   .CartRemove-link{
     font-size: 15px;
     margin-left: 10px;
+  }
+
+  .icons8-icon{
+    height: 28px;
+    width: 28px;
   }
 
   .Cart-update{

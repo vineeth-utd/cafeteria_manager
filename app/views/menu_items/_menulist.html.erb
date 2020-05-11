@@ -21,11 +21,11 @@
 
             <% if @current_user.role == "Manager" %>
               <%= link_to edit_menu_item_path(id: menuitem.id), method: "GET", class: "MenuItem-icon"  do %>
-                <%= image_tag "edit-solid.svg"%>
+                <%= image_tag "icons8-edit-64.png", class: "icons8-icon" %>
               <% end %>
 
               <%= link_to "/menu_items/#{menuitem.id}", method: "DELETE", class: "MenuItem-icon" do %>
-                <%= image_tag "delete-24px.svg" %>
+                <%= image_tag "icons8-trash-can-64.png", class: "icons8-icon" %>
               <% end %>
             <% end %>
 
