@@ -6,7 +6,7 @@
 
 
 <% order = @current_user.orders.being_created %>
-<% if order == nil || order.totalprice == 0%>
+<% if order == nil || order.totalprice == 0 %>
   <h6 class="Emptycart-text">Cart is empty!</h6>
 <% else %>
   <section class="Cart-section">
@@ -16,8 +16,8 @@
     </p>
     <ul>
       <% Orderitem.all.each do |orderitem| %>
-        <li class="Cart-content">
-          <% if orderitem.order_id == order.id && orderitem.qty > 0 %>
+        <% if orderitem.order_id == order.id && orderitem.qty > 0 %>
+          <li class="Cart-content">
             <span> <%= orderitem.menu_item_name %> </span>
             <span class="Cart-price">
               <p class="Cart-update">
@@ -36,10 +36,9 @@
                 class: "CartRemove-link"
               %>
             </span>
-          <% end %>
-        </li>
+          </li>
+        <% end %>
       <% end %>
-      </li>
     </ul>
 
     <p class="Total-price">Total: <%= order.totalprice %> Rs. </p>
