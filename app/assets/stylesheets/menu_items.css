@@ -85,8 +85,8 @@ body{
 }
 
 .icons8-icon{
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
 }
 
 .MenuItem-container:hover{
@@ -95,9 +95,6 @@ body{
 
 .MenuItem-container:hover > .MenuItem-icon{
   display: block;
-  height: 15px;
-  width: 15px;
-  /*margin: auto;*/
 }
 
 .Category-title{
