@@ -6,11 +6,83 @@ body{
   font-size: 40px;
   margin-top: 20px;
   margin-bottom: 30px;
+  color: rgb(54, 14, 14);
+}
+
+.About-main{
+  /*float: left;*/
+}
+
+.About-section{
+  width: 80%;
+  margin: 15px auto;
+  padding: 15px;
+  padding-top: 7px;
+  text-align: center;
+  background-color: rgb(240, 205, 205);
+}
+
+.Section-head{
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: rgb(7, 121, 111);
+  weight: 450;
+}
+
+.Section-text{
+  color: rgb(54, 14, 14);
+  font-size: 18px;
+}
+
+/*.Section-text > span{
+  margin-bottom: 50px;
+}*/
+
+.Spl-text{
+  font-size: 25px;
+  weight: 600;
+  margin-top: 15px;
+  color: rgb(76, 100, 11);
+}
+
+.Conclude-text{
+  font-size: 20px;
+  weight: 600;
+  margin-top: 15px;
 }
 
 @media only screen and (max-width: 480px) {
   .About-title{
     font-size: 25px;
     margin-top: 10px;
+    margin-bottom: 30px;
   }
+
+  .About-section{
+    width: 90%;
+    margin: 7px auto;
+    padding-top: 5px;
+  }
+
+  .Section-head{
+    font-size: 20px;
+    margin-bottom: 7.5px;
+  }
+
+  .Section-text{
+    font-size: 15px;
+  }
+
+  .Spl-text{
+    font-size: 20px;
+    weight: 600;
+    margin-top: 10px;
+  }
+
+  .Conclude-text{
+    font-size: 20px;
+    weight: 600;
+    margin-top: 10px;
+  }
+
 }

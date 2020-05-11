@@ -67,6 +67,12 @@ body{
   color: whitesmoke;
 }
 
+.nav-icon{
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+}
+
 .nav-links{
   /*display: flex;*/
   margin-left: auto;
@@ -99,5 +105,11 @@ body{
     padding: 4px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+  }
+
+  .nav-icon{
+    margin: 1px;
+    height: 35px;
+    width: 35px;
   }
 }

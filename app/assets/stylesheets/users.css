@@ -5,7 +5,7 @@ body{
 .NewUsers-title {
   margin-bottom: 30px;
   font-size: 35px;
-  color: black;
+  color: rgb(54, 14, 14);
 }
 
 .SignUp-box{
@@ -47,6 +47,7 @@ body{
   margin-top: 25px;
   font-size: 40px;
   font-family: sans-serif;
+  color: rgb(54, 14, 14);
 }
 
 /*.AddUser{
