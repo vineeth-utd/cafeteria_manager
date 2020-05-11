@@ -97,9 +97,10 @@ body{
 
 .Category-title{
   color: #453C52;
-  margin-bottom: 15px;
+  /*margin-bottom: 15px;*/
   font-size: 20px;
   font-weight: 600;
+  float: left;
 }
 
 .Category-section{
