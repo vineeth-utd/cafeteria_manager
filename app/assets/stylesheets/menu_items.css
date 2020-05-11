@@ -148,6 +148,8 @@ body{
 
   .AddMenuItem{
     height: 32px;
+    width: 70%;
+    margin: 7px auto;
     margin-bottom: 30px;
   }
 
