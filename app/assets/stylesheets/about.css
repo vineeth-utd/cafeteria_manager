@@ -9,17 +9,12 @@ body{
   color: rgb(54, 14, 14);
 }
 
-.About-main{
-  /*float: left;*/
-}
-
 .About-section{
   width: 80%;
   margin: 15px auto;
   padding: 15px;
   padding-top: 7px;
   text-align: center;
-  /*background-color: rgb(240, 205, 205);*/
 }
 
 .Section-head{
@@ -33,10 +28,6 @@ body{
   color: rgb(54, 14, 14);
   font-size: 18px;
 }
-
-/*.Section-text > span{
-  margin-bottom: 50px;
-}*/
 
 .Spl-text{
   font-size: 25px;
