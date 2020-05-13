@@ -70,6 +70,8 @@
 
 .CartUpdate-link{
   color: black;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .PlaceOrder-button{

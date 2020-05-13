@@ -49,18 +49,15 @@ body{
 .MenuItem-section{
   display: flex;
   margin-bottom: 30px;
-  /*margin-left: 30px;*/
 }
 
 .MenuItem-container{
   display: flex ;
   padding: 2px 8px;
   align-items: center;
-  /*margin: auto;*/
 }
 
 .MenuItem-icon{
-  /*margin-right: 10px;*/
   margin: auto;
   display: none;
 }
@@ -79,9 +76,24 @@ body{
   border: 1px solid transparent;
   padding: 6px 10px;
   border-radius: 4px;
-  /*margin-left: 10px;*/
-  /*margin: auto;*/
   margin-right: 50px;
+}
+
+.CartqtyUpdate-button{
+  font-size: 14px;
+  color: white;
+  background: linear-gradient(to right, #009999 0%, #336699 100%);
+  border: 1px solid transparent;
+  padding: 6px;
+  border-radius: 4px;
+  margin-right: 50px;
+}
+
+.CartUpdate-link{
+  color: white;
+  font-size: 16px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .icons8-icon{
@@ -99,15 +111,12 @@ body{
 
 .Category-title{
   color: #453C52;
-  /*margin-bottom: 15px;*/
   font-size: 20px;
   font-weight: 600;
   float: left;
 }
 
 .Category-section{
-  /*width: 85%;*/
-  /*margin: 10px auto;*/
   margin-left: 150px;
   margin-right: 50px;
   margin-bottom: 15px;
@@ -198,13 +207,11 @@ body{
   }
 
   .Category-title{
-    /*margin-bottom: 15px;*/
     font-size: 18px;
     font-weight: 600;
   }
 
   .Category-section{
-    /*margin: auto;*/
     width: 90%;
     margin: 2px auto;
     margin-bottom: 10px;
@@ -224,11 +231,9 @@ body{
     max-width: 200px;
     margin-left: 0px;
     display: block;
-    /*margin-right: auto;*/
   }
 
   .MenuItemList-name{
-    /*float: left;*/
     font-size: 15px;
     margin-left: 0px;
   }
@@ -272,6 +277,15 @@ body{
 
   .AddItemCart-button{
     font-size: 11px;
+    padding: 6px;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: 0px;
+    float: right;
+  }
+
+  .CartqtyUpdate-button{
+    font-size: 12px;
     padding: 6px;
     border-radius: 2px;
     margin-left: auto;

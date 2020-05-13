@@ -31,10 +31,18 @@
 
             <% if @order %>
               <% if @orderitem.get(menuitem.id) %>
-                <p class="AddItemCart-button">
-                  <%= link_to "-  ", "/order_items/#{@orderitem.get(menuitem.id).id}?symbol=0", method: "PATCH", class: "CartUpdate-link"  %>
+                <p class="CartqtyUpdate-button">
+                  <%= link_to "-  ",
+                    "/order_items/#{@orderitem.get(menuitem.id).id}?symbol=0",
+                    method: "PATCH",
+                    class: "CartUpdate-link"
+                  %>
                   <%= @orderitem.get_qty(menuitem.id) %>
-                  <%= link_to  "  +", "/order_items/#{@orderitem.get(menuitem.id).id}?symbol=1", method: "PATCH", class: "CartUpdate-link" %>
+                  <%= link_to  "  +",
+                    "/order_items/#{@orderitem.get(menuitem.id).id}?symbol=1",
+                    method: "PATCH",
+                    class: "CartUpdate-link"
+                  %>
                 </p>
               <% else %>
                 <%= form_with url: order_items_path(menu_item_id: menuitem.id), method: "POST" do |form| %>
