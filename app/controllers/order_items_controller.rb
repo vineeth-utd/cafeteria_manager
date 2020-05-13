@@ -29,8 +29,8 @@ class OrderItemsController < ApplicationController
 
   def update
     orderitem = Orderitem.find(params[:id])
-    page = params[:page]
-    symbol = params[:symbol]
+    page = params[:page].to_i
+    symbol = params[:symbol].to_i
     symbol = symbol.to_i
     if symbol == 1
       orderitem.qty = orderitem.qty + 1
