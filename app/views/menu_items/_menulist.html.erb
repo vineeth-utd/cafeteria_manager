@@ -33,14 +33,14 @@
               <% if @orderitem.get(menuitem.id) %>
                 <p class="CartqtyUpdate-button">
                   <%= link_to "-  ",
-                    "/order_items/#{@orderitem.get(menuitem.id).id}?symbol=0",
-                    method: "PATCH",
+                    "/order_items/#{@orderitem.get(menuitem.id).id}?page=0&symbol=0",
+                    method: :patch,
                     class: "CartUpdate-link"
                   %>
                   <%= @orderitem.get_qty(menuitem.id) %>
                   <%= link_to  "  +",
-                    "/order_items/#{@orderitem.get(menuitem.id).id}?symbol=1",
-                    method: "PATCH",
+                    "/order_items/#{@orderitem.get(menuitem.id).id}?page=0&symbol=1",
+                    method: :patch,
                     class: "CartUpdate-link"
                   %>
                 </p>

@@ -29,6 +29,7 @@ class OrderItemsController < ApplicationController
 
   def update
     orderitem = Orderitem.find(params[:id])
+    page = params[:page]
     symbol = params[:symbol]
     symbol = symbol.to_i
     if symbol == 1
@@ -41,7 +42,12 @@ class OrderItemsController < ApplicationController
     if orderitem.qty == 0
       orderitem.destroy
     end
-    redirect_to new_order_path
+    if page == 0
+      redirect_to menu_items_path
+    end
+    if page == 1
+      redirect_to new_order_path
+    end
   end
 
   def destroy

@@ -21,9 +21,19 @@
             <span> <%= orderitem.menu_item_name %> </span>
             <span class="Cart-price">
               <p class="Cart-update">
-                <%= link_to "-  ", "/order_items/#{orderitem.id}?symbol=0", method: "PATCH", class: "CartUpdate-link"  %>
+                <%= link_to "-  ",
+                  "/order_items/#{orderitem.id}?page=1&symbol=0",
+                  method: :patch,
+                  class: "CartUpdate-link",
+                  remote: false
+                %>
                 <%= orderitem.qty %>
-                <%= link_to  "  +", "/order_items/#{orderitem.id}?symbol=1", method: "PATCH", class: "CartUpdate-link" %>
+                <%= link_to  "  +",
+                  "/order_items/#{orderitem.id}?page=1&symbol=1",
+                  method: :patch,
+                  class: "CartUpdate-link",
+                  remote: false
+                %>
               </p>
               <p class="qty-price">
                 <%= orderitem.menu_item_price*orderitem.qty %> Rs.
