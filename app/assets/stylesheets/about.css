@@ -15,6 +15,7 @@ body{
   padding: 15px;
   padding-top: 7px;
   text-align: center;
+  background: linear-gradient(to top right, #33ccff 5%, #ff99cc 95%);
 }
 
 .Section-head{
