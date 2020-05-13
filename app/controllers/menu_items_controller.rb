@@ -3,6 +3,7 @@ class MenuItemsController < ApplicationController
     @categories = Menuitem.distinct.pluck(:category)
     #@categories.sort!
     @order = current_user.orders.being_created
+    @orderitem = @order.orderitems
     render "index"
   end
 
