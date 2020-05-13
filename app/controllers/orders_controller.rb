@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @orders = Order.where(user_id: current_user.id).order("id DESC")
+    @order = @current_user.orders.being_created
     render "new"
   end
 

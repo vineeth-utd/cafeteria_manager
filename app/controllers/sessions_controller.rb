@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
-      redirect_to about_index_path
+      redirect_to menu_items_path
     else
       flash[:error] = "Your login attempt was invalid. Please retry."
       redirect_to new_sessions_path
