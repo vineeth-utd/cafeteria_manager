@@ -13,9 +13,20 @@
               </span>
               <span class="MenuItemList-price">
                 <%= menuitem.price %> Rs
-                <a href="" data-toggle="tooltip" placement='top' title="<%= menuitem.description %>">
+                <span
+                  data-toggle="tooltip"
+                  class="btn"
+                  placement='top'
+                  trigger= "click hover focus"
+                  title="<%= menuitem.description %>"
+                >
                   <%= image_tag "icons8-info-50.png", class: "info-img" %>
-                </a>
+                </span>
+                <script>
+                  $('[data-toggle="tooltip"]').tooltip({
+                    template: '<div class="tooltip tooltip-custom"><div class="title">Description</div><div> <%= image_tag "#{menuitem.imgurl}", class: "img1" %> </div><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+                  })
+                </script>
               </span>
             </p>
 

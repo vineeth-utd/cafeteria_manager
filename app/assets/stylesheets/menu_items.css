@@ -62,6 +62,25 @@ body{
   display: none;
 }
 
+.tooltip-custom{
+  background-color: snow;
+  text-align: center;
+  padding: 20px;
+}
+
+.tooltip-custom > .title{
+  color: black;
+}
+
+.tooltip-custom > .tooltip-inner{
+  background-color: rgb(218, 92, 92);
+}
+
+.img1{
+  height: 60px;
+  width: 60px;
+}
+
 .AddToCart-qty{
   background-color: whitesmoke;
   width: 50px;
