@@ -66,6 +66,7 @@ body{
   background-color: snow;
   text-align: center;
   padding: 20px;
+  padding-top: 10px;
 }
 
 .tooltip-custom > .title{
