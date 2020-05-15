@@ -326,4 +326,9 @@ body{
     margin-bottom: 40px;
     margin-top: 10px;
   }
+
+  .tooltip-custom > .title{
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
 }
