@@ -14,7 +14,6 @@ body{
   border: 3px solid #8d3737;
   border-radius: 20px;
   box-shadow: 2px 2px 20px;
-  /*background: linear-gradient(to top right, #ccff66 0%, #00ffcc 100%);*/
   background: white;
 }
 
@@ -36,7 +35,6 @@ body{
   font-size: 14px;
   color: white;
   background: linear-gradient(to right, #009999 0%, #336699 100%);
-  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
@@ -49,12 +47,6 @@ body{
   font-family: sans-serif;
   color: rgb(54, 14, 14);
 }
-
-/*.AddUser{
-  float: right;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}*/
 
 .UserList-section{
   width: 50%;

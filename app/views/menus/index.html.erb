@@ -21,8 +21,8 @@
 
           <p class="Menu-name"> <%= menu.name %> </p>
 
-          <%= form_with(url: "/menus/#{menu.id}" , method: "DELETE", class: "Menu-icon") do %>
-            <input type="image" src="assets/delete-24px.svg" >
+          <%= link_to "/menus/#{menu.id}", method: "DELETE", class: "Menu-icon" do %>
+            <%= image_tag "icons8-trash-can-64.png", class: "icons8-icon" %>
           <% end %>
         </label>
       <% end %>

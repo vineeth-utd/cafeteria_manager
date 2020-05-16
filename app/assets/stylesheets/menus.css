@@ -4,39 +4,30 @@ body{
 
 .MenuPage-title{
   font-size: 35px;
-  /*font-size: 7vh;*/
   margin-bottom: 50px;
-  /*margin-bottom: 15vh;*/
   margin-top: 20px;
-  /*margin-top: 6vh;*/
   color: rgb(54, 14, 14);
 }
 
 .AddMenu{
   height: 32px;
-  /*height:10vh;*/
   align-items: stretch;
   margin-bottom: 40px;
-  /*margin-bottom: 13vh;*/
 }
 
 .AddMenu-text{
   padding: 6px 12px;
   font-size: 14px;
-  /*font-size: 3vh;*/
   color: #453C52;
   margin-right: 10px;
-  /*margin-right: 2.5vw;*/
   border-radius: 4px;
   border: 1px solid #BFB8CC;
 }
 
 .AddMenu-button{
   font-size: 14px;
-  /*font-size: 3vh;*/
   color: white;
   background: linear-gradient(to right, #009999 0%, #336699 100%);
-  /*background-color: #488878;*/
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
@@ -44,32 +35,29 @@ body{
 
 .Menu-list{
   font-size: 16px;
-  /*font-size: 4.5vh;*/
   margin-bottom: 20px;
-  /*margin-bottom: 6vh;*/
-  /*margin-left: 40%;*/
 }
 
 .Menu-Container{
   display:flex ;
   padding: 2px 8px;
   margin: 12px;
-  /*margin: 2.5vh;*/
-  /*margin-left: 550px;*/
   margin-left: 43vw;
-  /*align-items: center;*/
 }
 
 .Menu-Checkbox{
   width: 16px;
-  /*width: 4.5vw;*/
   height: 16px;
-  /*height: 5vh;*/
 }
 
 .Menu-icon{
   margin-left: 10px;
   visibility: hidden;
+}
+
+.icons8-icon{
+  height: 15px;
+  width: 15px;
 }
 
 .Menu-Container:hover{
