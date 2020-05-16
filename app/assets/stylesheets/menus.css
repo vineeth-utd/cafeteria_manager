@@ -51,13 +51,8 @@ body{
 }
 
 .Menu-icon{
-  margin-left: 10px;
-  visibility: hidden;
-}
-
-.icons8-icon{
-  height: 15px;
-  width: 15px;
+  margin-left: 30px;
+  display: none;
 }
 
 .Menu-Container:hover{
@@ -65,9 +60,7 @@ body{
 }
 
 .Menu-Container:hover > .Menu-icon{
-  visibility: visible;
-  height: 13px;
-  width: 13px;
+  display: block;
 }
 
 @media only screen and (max-width: 480px) {

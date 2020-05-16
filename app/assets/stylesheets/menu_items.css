@@ -277,7 +277,6 @@ body{
 
   .MenuItem-icon{
     margin-right: 7px;
-    visibility: hidden;
   }
 
   .MenuItem-container:hover > .MenuItemList-name {
@@ -289,7 +288,6 @@ body{
   }
 
   .MenuItem-container:hover > .MenuItem-icon{
-    visibility: visible;
     height: 17px;
     width: 17px;
   }
