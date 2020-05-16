@@ -22,6 +22,7 @@ class MenuItemsController < ApplicationController
       description: params[:description],
       price: params[:price],
       category: params[:category],
+      imgurl: params[:imgurl],
     )
     if menu_item.save
       flash[:notice] = "New item is created successfully!"
@@ -41,6 +42,7 @@ class MenuItemsController < ApplicationController
       description: params[:description],
       price: params[:price],
       category: params[:category],
+      imgurl: params[:imgurl],
     )
     flash[:notice] = "Item with ID:#{menuitem.id} is updated successfully!"
     redirect_to menu_items_path

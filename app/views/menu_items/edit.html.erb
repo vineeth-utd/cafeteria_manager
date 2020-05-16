@@ -31,6 +31,13 @@
           <% end %>
         </select>
 
+        <%= form.text_field :imgurl,
+          class: "AddMenuItem-text",
+          placeholder: "image url",
+          value: @menuitem.imgurl,
+          autofocus: "autofocus"
+        %>
+
         <%= form.submit "Update", class: "AddMenuItem-button" %>
       <% end %>
     </section>

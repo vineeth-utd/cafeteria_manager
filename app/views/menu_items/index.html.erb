@@ -14,6 +14,7 @@
             <option value = "<%= category %>" > <%= category %> </option>
           <% end %>
         </select>
+        <%= form.text_field :imgurl, class: "AddMenuItem-text", placeholder: "image url" %>
         <%= form.submit "Add", class: "AddMenuItem-button" %>
       <% end %>
     </section>
