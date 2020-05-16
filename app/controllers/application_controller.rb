@@ -22,4 +22,10 @@ class ApplicationController < ActionController::Base
       redirect_to "/"
     end
   end
+
+  def ensure_billing_clerk
+    unless current_user.role == "Billing-Clerk"
+      redirect_to "/"
+    end
+  end
 end
