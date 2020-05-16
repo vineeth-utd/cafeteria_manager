@@ -26,8 +26,7 @@ class OrdersController < ApplicationController
   end
 
   def pending_orders
-    ensure_manager
-    ensure_billing_clerk
+    ensure_not_user
     @orders = Order.get_pending_orders.order("id ASC")
     render "pending_orders"
   end

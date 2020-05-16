@@ -23,8 +23,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def ensure_billing_clerk
-    unless current_user.role == "Billing-Clerk"
+  def ensure_not_user
+    if current_user.role == "User"
       redirect_to "/"
     end
   end
