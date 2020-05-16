@@ -24,7 +24,7 @@
           autofocus: "autofocus"
         %>
 
-        <select name="category" class="AddMenuItem-text" placeholder="Category">
+        <select name="category" class="AddMenuItem-text" placeholder="Category" include_blank=true>
           <option value= <%= @menuitem.category %> > <%= @menuitem.category %> </option>
           <% @categories.each do |category| %>
             <option value = <%= category %> > <%= category %> </option>
