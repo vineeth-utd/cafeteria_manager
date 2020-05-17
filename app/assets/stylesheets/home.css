@@ -73,21 +73,16 @@ body{
   width: 40px;
 }
 
-.nav-links{
-  /*display: flex;*/
-  margin-left: auto;
-}
-
 .nav-link{
   margin: 5px;
-  padding: 5px;
+  padding: 7px;
   font-size: 13px;
   box-sizing: border-box;
   display: inline-block;
-  color: #FFFFFF;
-  background-color: rgb(8, 99, 138);
+  color: snow;
+  background-color: rgb(12, 99, 136);
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -111,5 +106,22 @@ body{
     margin: 1px;
     height: 35px;
     width: 35px;
+  }
+
+  .Welcome-text{
+    margin: 1.5px;
+    padding: 1.5px;
+    font-size: 12px;
+    display: none;
+  }
+
+  .nav-link{
+    background: none;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 15px;
   }
 }
