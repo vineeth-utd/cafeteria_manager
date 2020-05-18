@@ -87,11 +87,7 @@
       </nav>
 
       <div class="fixed-nav">
-        <% if @current_user.role == "User" %>
-          <%= link_to "My Cart", new_order_path, class: "fixed-link" %>
-        <% else %>
-          <%= link_to "Offline Cart", new_order_path, class: "fixed-link" %>
-        <% end %>
+        <%= link_to "View Cart", new_order_path, class: "fixed-link" %>
       </div>
     <% end %>
 
