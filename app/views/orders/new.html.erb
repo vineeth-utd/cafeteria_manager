@@ -13,7 +13,8 @@
       <span class="Cart-price">Price</span>
     </p>
     <ul>
-      <% @order.orderitems.all.each do |orderitem| %>
+      <% orders=@order.orderitems.order("id") %>
+      <% orders.all.each do |orderitem| %>
         <% if orderitem.qty > 0 %>
           <li class="Cart-content">
             <span> <%= orderitem.menu_item_name %> </span>

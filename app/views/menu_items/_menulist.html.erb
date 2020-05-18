@@ -3,7 +3,8 @@
   <br><br>
 
   <ul>
-    <% menus.menuitems.all.each do |menuitem| %>
+    <% menu=menus.menuitems.order("id") %>
+    <% menu.all.each do |menuitem| %>
       <% if menuitem.category == category %>
         <li class="MenuItem-list">
           <section class="MenuItem-container">

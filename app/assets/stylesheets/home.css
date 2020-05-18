@@ -85,6 +85,10 @@ body{
   border-radius: 4px;
 }
 
+.fixed-nav{
+  display: none;
+}
+
 @media only screen and (max-width: 480px) {
   .Flash-error{
     margin-bottom: 15px;
@@ -123,5 +127,21 @@ body{
     padding-left: 0px;
     padding-right: 0px;
     font-size: 15px;
+  }
+
+  .fixed-nav{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(160, 243, 160);
+  }
+
+  .fixed-link{
+    text-decoration: none;
+    margin: 5px;
+    padding: 7px;
+    font-size: 13px;
+    color: snow;
+    border: 1px solid transparent;
   }
 }
