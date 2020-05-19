@@ -10,12 +10,14 @@
 }
 
 .Emptycart-text{
+  font-family: Andika;
   font-size: 20px;
   margin-top: 45px;
   color: rgb(7, 95, 66);
 }
 
 .Cart-section{
+  font-family: Andika;
   width: 70%;
   margin: 5px auto;
 }
@@ -95,6 +97,7 @@
 }
 
 .OrderItem-section{
+  font-family: Andika;
   width: 80%;
   border: 1px solid transparent;
   background-color: rgb(240, 205, 205);
