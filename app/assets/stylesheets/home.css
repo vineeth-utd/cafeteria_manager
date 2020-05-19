@@ -131,20 +131,21 @@ body{
 
   .fixed-nav{
     display: block;
-    margin-left: 35vw;
-    margin-bottom: 10px;
+    width: 100px;
     position: fixed;
-    bottom: 0;
-    background: linear-gradient(to bottom, #00cc99 0%, #00cc66 100%);
-    border-radius: 4px;
+    bottom: 10px;
+    margin-left: 35vw;
+    background: linear-gradient(to bottom, #00cc99 0%, #258655 100%);
+    border-radius: 8px;
     border: 1px solid transparent;
+    padding: 2px;
   }
 
   .fixed-link{
     text-decoration: none;
     margin: 5px;
-    padding: 7px;
+    padding: 8px;
     font-size: 13px;
-    color: snow;
+    color: white;
   }
 }
