@@ -2,6 +2,49 @@
   text-align: center;
 }
 
+.Reports{
+  height: 32px;
+  align-items: stretch;
+  margin-bottom: 60px;
+  margin-left: 22vw;
+  display: flex;
+}
+
+.Reports-text{
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #453C52;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #BFB8CC;
+  border-bottom: 32px;
+  width: 170px;
+}
+
+.Reports-label{
+  font-family: Andika;
+}
+
+.Reports-date{
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #453C52;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #BFB8CC;
+  border-bottom: 32px;
+  width: 140px;
+}
+
+.Reports-button{
+  font-size: 14px;
+  color: white;
+  background: linear-gradient(to right, #009999 0%, #336699 100%);
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
 .Cart-title{
   font-family: sans-serif;
   font-size: 35px;
@@ -224,6 +267,38 @@
     font-size: 25px;
     margin-top: 10px;
     margin-bottom: 15px;
+  }
+
+  .Reports{
+    height: 50px;
+    width: 60%;
+    margin: auto 70px;
+    margin-bottom: 80px;
+    margin-top: 10px;
+  }
+
+  .Reports-text{
+    padding: 6px 8px;
+    font-size: 11px;
+    margin-right: 5px;
+    border-radius: 2px;
+    border-bottom: 32px;
+    width: 150px;
+  }
+
+  .Reports-date{
+    padding: 6px 8px;
+    font-size: 11px;
+    margin-right: 5px;
+    border-radius: 2px;
+    border-bottom: 32px;
+    width: 120px;
+  }
+
+  .Reports-button{
+    font-size: 12px;
+    padding: 6px 22px;
+    border-radius: 2px;
   }
 
   .OrderItem-section{

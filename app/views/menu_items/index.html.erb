@@ -2,22 +2,20 @@
 <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
 
 <% if @current_user.role == "Manager" %>
-  <section class="MenuItem-section">
-    <section class="AddMenuItem">
-      <%= form_with url: menu_items_path, method: "POST" do |form| %>
-        <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
-        <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
-        <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
-        <select name="category" class="AddMenuItem-text" placeholder="Category" include_blank=true>
-          <option value="">Select Category</option>
-          <% @categories.each do |category| %>
-            <option value = "<%= category %>" > <%= category %> </option>
-          <% end %>
-        </select>
-        <%= form.text_field :imgurl, class: "AddMenuItem-text", placeholder: "image url" %>
-        <%= form.submit "Add", class: "AddMenuItem-button" %>
-      <% end %>
-    </section>
+  <section class="AddMenuItem">
+    <%= form_with url: menu_items_path, method: "POST" do |form| %>
+      <%= form.text_field :name, class: "AddMenuItem-text", placeholder: "Any new MenuItem?" %>
+      <%= form.text_field :description, class: "AddMenuItem-text", placeholder: "Description" %>
+      <%= form.number_field :price, class: "AddMenuItem-price", placeholder: 0.0 %>
+      <select name="category" class="AddMenuItem-text" placeholder="Category" include_blank=true>
+        <option value="">Select Category</option>
+        <% @categories.each do |category| %>
+          <option value = "<%= category %>" > <%= category %> </option>
+        <% end %>
+      </select>
+      <%= form.text_field :imgurl, class: "AddMenuItem-text", placeholder: "image url" %>
+      <%= form.submit "Add", class: "AddMenuItem-button" %>
+    <% end %>
   </section>
 
   <h2 class="WalkIn-title">Order for Walk-In Customer</h2>

@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :orders
   resources :order_items
   get "/pending_orders", to: "orders#pending_orders", as: :pending_orders
+  get "/reports", to: "orders#reports", as: :reports
+  get "/invoice", to: "orders#invoice", as: :invoice
 end

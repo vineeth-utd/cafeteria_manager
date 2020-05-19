@@ -1,9 +1,17 @@
 <% if @current_user.role == "User" %>
   <h1 class="Order-title">My orders</h1>
-  <%= render partial: "orderlist", locals: {orders: @orders, pending_button: false} %>
+  <%= render partial: "orderlist", locals: {
+    orders: @orders,
+    pending_button: false,
+    report_form: false
+  } %>
 
 
 <% else %>
   <h1 class="Order-title">Orders</h1>
-  <%= render partial: "orderlist", locals: {orders: @all_orders, pending_button: false} %>
+  <%= render partial: "orderlist", locals: {
+    orders: @all_orders,
+    pending_button: false,
+    report_form: true
+  } %>
 <% end %>

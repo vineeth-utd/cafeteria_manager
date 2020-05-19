@@ -13,8 +13,9 @@ body{
 .AddMenuItem{
   height: 32px;
   align-items: stretch;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   margin-left: 10vw;
+  display: flex;
 }
 
 .AddMenuItem-text{
@@ -46,11 +47,6 @@ body{
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
-}
-
-.MenuItem-section{
-  display: flex;
-  margin-bottom: 30px;
 }
 
 .MenuItem-container{
@@ -202,7 +198,7 @@ body{
     height: 95px;
     width: 70%;
     margin: auto 60px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     margin-top: 10px;
   }
 
@@ -228,10 +224,6 @@ body{
     font-size: 12px;
     padding: 6px 22px;
     border-radius: 2px;
-  }
-
-  .MenuItem-section{
-    margin-bottom: 50px;
   }
 
   .MenuItem-icon{

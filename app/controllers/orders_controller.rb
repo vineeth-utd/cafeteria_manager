@@ -30,4 +30,12 @@ class OrdersController < ApplicationController
     @orders = Order.get_pending_orders.order("id ASC")
     render "pending_orders"
   end
+
+  def reports
+    ensure_manager
+    from = Date.parse(params[:from])
+    to = Date.parse(params[:to])
+    @orders = Order.where("delivered_at >= ? AND delivered_at <= ? AND user_id = ?", from, to, params[:id])
+    render "reports"
+  end
 end
