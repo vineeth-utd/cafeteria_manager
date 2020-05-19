@@ -38,4 +38,9 @@ class OrdersController < ApplicationController
     @orders = Order.where("delivered_at >= ? AND delivered_at <= ? AND user_id = ?", from, to, params[:id])
     render "reports"
   end
+
+  def invoice
+    ensure_manager
+    render "invoice"
+  end
 end

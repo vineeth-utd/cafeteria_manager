@@ -3,7 +3,8 @@
   <%= render partial: "orderlist", locals: {
     orders: @orders,
     pending_button: false,
-    report_form: false
+    report_form: false,
+    invoice_button: false
   } %>
 
 
@@ -12,6 +13,7 @@
   <%= render partial: "orderlist", locals: {
     orders: @all_orders,
     pending_button: false,
-    report_form: true
+    report_form: true,
+    invoice_button: false
   } %>
 <% end %>
