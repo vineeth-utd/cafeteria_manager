@@ -3,6 +3,7 @@ body{
 }
 
 .MenuItemPage-title{
+  font-family: sans-serif;
   font-size: 35px;
   margin-bottom: 30px;
   margin-top: 20px;
@@ -138,9 +139,9 @@ body{
 }
 
 .Category-title{
+  font-weight: 600;
   color: #453C52;
   font-size: 20px;
-  font-weight: 600;
   float: left;
 }
 
@@ -180,6 +181,7 @@ body{
 }
 
 .EditMenuItemPage-title{
+  font-family: sans-serif;
   font-size: 35px;
   margin-bottom: 40px;
   margin-top: 20px;
@@ -240,7 +242,7 @@ body{
 
   .Category-title{
     font-size: 18px;
-    font-weight: 600;
+    ;
   }
 
   .Category-section{

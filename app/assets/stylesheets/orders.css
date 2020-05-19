@@ -3,6 +3,7 @@
 }
 
 .Cart-title{
+  font-family: sans-serif;
   font-size: 35px;
   margin-bottom: 50px;
   margin-top: 20px;
@@ -86,6 +87,7 @@
 }
 
 .Order-title{
+  font-family: sans-serif;
   font-size: 35px;
   margin-top: 20px;
   margin-bottom: 25px;

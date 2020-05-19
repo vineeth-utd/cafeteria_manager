@@ -3,6 +3,7 @@ body{
 }
 
 .NewUsers-title {
+  font-family: sans-serif;
   margin-bottom: 30px;
   font-size: 35px;
   color: rgb(54, 14, 14);
@@ -41,10 +42,10 @@ body{
 }
 
 .UserList-title{
+  font-family: sans-serif;
   margin-bottom: 35px;
   margin-top: 25px;
   font-size: 40px;
-  font-family: sans-serif;
   color: rgb(54, 14, 14);
 }
 
