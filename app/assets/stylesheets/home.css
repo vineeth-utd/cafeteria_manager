@@ -133,7 +133,7 @@ body{
     display: block;
     width: 100px;
     position: fixed;
-    bottom: 10px;
+    bottom: 22px;
     margin-left: 35vw;
     background: linear-gradient(to bottom, #00cc99 0%, #258655 100%);
     border-radius: 8px;
