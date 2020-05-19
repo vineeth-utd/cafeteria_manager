@@ -55,7 +55,7 @@
         <% end %>
 
         <% if invoice_button %>
-          <%= form_with url: invoice_path, method: :get do |form| %>
+          <%= form_with url: invoice_path(id: order.id), method: :get, local: true do |form| %>
             <%= form.submit "Invoice", class: "PlaceOrder-button" %>
           <% end %>
         <% end %>
