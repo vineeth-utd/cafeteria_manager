@@ -37,6 +37,7 @@ body{
 }
 
 .Flash-error{
+  font-family: Andika;
   background: linear-gradient(to right, #cc0066 0%, #993333 100%);
   color: whitesmoke;
   margin-right: 20vw;
@@ -49,6 +50,7 @@ body{
 }
 
 .Flash-notice{
+  font-family: Andika;
   background: linear-gradient(to right, #00cc99 0%, #009999 100%);
   color: whitesmoke;
   margin-right: 20vw;

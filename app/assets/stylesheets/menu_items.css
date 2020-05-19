@@ -141,6 +141,7 @@ body{
 .Category-title{
   font-weight: 600;
   color: #453C52;
+  /*color: rgb(67, 30, 117);*/
   font-size: 20px;
   float: left;
 }
@@ -177,6 +178,7 @@ body{
 }
 
 .WalkIn-title{
+  font-family: Lato;
   font-size: 20px;
   margin-bottom: 20px;
 }

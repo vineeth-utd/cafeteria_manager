@@ -40,6 +40,7 @@ body{
 }
 
 .Menu-Container{
+  font-family: Andika;
   display:flex ;
   padding: 2px 8px;
   margin: 12px;
