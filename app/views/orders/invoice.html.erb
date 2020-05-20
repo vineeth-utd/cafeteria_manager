@@ -22,7 +22,7 @@
     </section>
     <br>
     <section class="InvoiceSection-text">
-      <% if order.user.role == "User" %>
+      <% if @order.user.role == "User" %>
         <p> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
       <% else %>
         <p>Walk-In Customer</p>
