@@ -3,21 +3,24 @@
 <% if @order.user %>
   <section class="InvoiceSection">
     <section class="InvoiceSection-text">
-      <p class="OrderId-text"> Order Id: <%= @order.id %> </p>
+      <p> Order Id: <%= @order.id %> </p>
       <% if @order.delivered_at %>
-        <p class="Ordered-at">
+        <p>
           Delivered date: <%= @order.delivered_at.strftime("%-d %b,%Y") %> at <%= @order.delivered_at.strftime("%I:%M %P") %>
         </p>
       <% end %>
     </section>
+    <br>
     <section class="InvoiceSection-text">
-      <p class="Ordered-at"> Ordered date: <%= @order.date %> </p>
+      <p> Ordered date: <%= @order.date %> </p>
     </section>
+    <br>
     <section class="InvoiceSection-text">
-      <p class="OrderId-text"> Billing To: </p>
+      <p> Billing To: </p>
     </section>
+    <br>
     <section class="InvoiceSection-text">
-      <p class="OrderId-text"> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
+      <p> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
     </section>
 
   <section class="Cart-section">
