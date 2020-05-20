@@ -85,10 +85,6 @@
   margin-left: 5px;
 }
 
-.Invoice-item{
-  max-width: 140px;
-}
-
 .Cart-price{
   margin-left: auto;
   padding: 5px;
@@ -195,6 +191,22 @@
   font-size: 18px;
 }
 
+.Invoice-item{
+  max-width: 120px;
+}
+
+.Invoice-section{
+  margin: auto 10px;
+  margin-bottom: 20px;
+}
+
+.InvoiceSection-text{
+  display: flex;
+  font-style: Andika;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 480px) {
   .Cart-title{
     font-size: 25px;
@@ -218,7 +230,7 @@
   }
 
   .Invoice-item{
-    max-width: 100px;
+    max-width: 90px;
   }
 
   .Cart-price{
@@ -349,5 +361,15 @@
     margin-top: 12px;
     margin-bottom: 17px;
     font-size: 12px;
+  }
+
+  .Invoice-section{
+    margin: auto 6px;
+    margin-bottom: 10px;
+  }
+
+  .InvoiceSection-text{
+    margin-bottom: 7px;
+    font-size: 15px;
   }
 }

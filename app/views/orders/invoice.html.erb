@@ -1,15 +1,24 @@
 <h1 class="Order-title">Invoice details</h1>
 
 <% if @order.user %>
-  <p class="OrderId-text"> Order Id: <%= @order.id %> </p>
-  <p class="Ordered-at"> Ordered date: <%= @order.date %> </p>
-  <p class="OrderId-text"> Billing To: </p>
-  <p class="OrderId-text"> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
-  <% if @order.delivered_at %>
-    <p class="Ordered-at">
-      Delivered date: <%= @order.delivered_at.strftime("%-d %b,%Y") %> at <%= @order.delivered_at.strftime("%I:%M %P") %>
-    </p>
-  <% end %>
+  <section class="InvoiceSection">
+    <section class="InvoiceSection-text">
+      <p class="OrderId-text"> Order Id: <%= @order.id %> </p>
+      <% if @order.delivered_at %>
+        <p class="Ordered-at">
+          Delivered date: <%= @order.delivered_at.strftime("%-d %b,%Y") %> at <%= @order.delivered_at.strftime("%I:%M %P") %>
+        </p>
+      <% end %>
+    </section>
+    <section class="InvoiceSection-text">
+      <p class="Ordered-at"> Ordered date: <%= @order.date %> </p>
+    </section>
+    <section class="InvoiceSection-text">
+      <p class="OrderId-text"> Billing To: </p>
+    </section>
+    <section class="InvoiceSection-text">
+      <p class="OrderId-text"> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
+    </section>
 
   <section class="Cart-section">
     <p class="Cart-heading">
