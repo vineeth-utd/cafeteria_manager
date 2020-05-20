@@ -33,9 +33,18 @@ class OrdersController < ApplicationController
 
   def reports
     ensure_manager
+    id = params[:id]
     from = Date.parse(params[:from])
     to = Date.parse(params[:to])
-    @orders = Order.where("delivered_at >= ? AND delivered_at <= ? AND user_id = ?", from, to, params[:id])
+    if id.blank?
+      @orders = Order.where("delivered_at >= ? AND delivered_at <= ?", from, to)
+    elsif from.blank? && to.blank?
+      @orders = Order.where("user_id = ?", id)
+    elsif id.blank? && from.blank? && to.blank?
+      @orders = Order.all
+    else
+      @orders = Order.where("delivered_at >= ? AND delivered_at <= ? AND user_id = ?", from, to, id)
+    end
     render "reports"
   end
 
