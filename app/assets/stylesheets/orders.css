@@ -203,8 +203,12 @@
 .InvoiceSection-text{
   display: flex;
   font-style: Andika;
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 10px;
+}
+
+.Right-text{
+  margin-left: auto;
 }
 
 @media only screen and (max-width: 480px) {
@@ -370,6 +374,6 @@
 
   .InvoiceSection-text{
     margin-bottom: 7px;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
