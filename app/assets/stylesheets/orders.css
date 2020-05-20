@@ -382,7 +382,11 @@
     font-size: 14px;
   }
 
+  .Right-text{
+    max-width: 180px;
+  }
+
   .spl-text{
-    font-size: 19px;
+    font-size: 17.5px;
   }
 }
