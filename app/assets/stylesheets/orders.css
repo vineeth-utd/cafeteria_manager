@@ -196,19 +196,23 @@
 }
 
 .Invoice-section{
-  margin: auto 10px;
-  margin-bottom: 20px;
+  margin: auto 15px;
+  margin-bottom: 30px;
 }
 
 .InvoiceSection-text{
   display: flex;
-  font-style: Andika;
+  font-family: Andika;
   font-size: 17px;
   margin-bottom: 5px;
 }
 
 .Right-text{
   margin-left: auto;
+}
+
+.spl-txt{
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -368,12 +372,16 @@
   }
 
   .Invoice-section{
-    margin: auto 6px;
+    margin: auto 7px;
     margin-bottom: 10px;
   }
 
   .InvoiceSection-text{
     margin-bottom: 4px;
     font-size: 14px;
+  }
+
+  .spl-text{
+    font-size: 17px;
   }
 }
