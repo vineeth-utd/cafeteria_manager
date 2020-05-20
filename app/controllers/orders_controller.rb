@@ -14,6 +14,7 @@ class OrdersController < ApplicationController
     order = Order.find(params[:id])
     if order.status == "being_created"
       order.status = "order_confirmed"
+      order.date = Date.today
       order.save!
       flash[:notice] = "Your order with ID:#{order.id} is confirmed!"
       redirect_to menu_items_path

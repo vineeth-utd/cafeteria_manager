@@ -12,7 +12,9 @@
     </section>
     <br>
     <section class="InvoiceSection-text">
+    <% if @order.date %>
       <p> Ordered date: <%= @order.date %> </p>
+    <% end %>
     </section>
     <br>
     <section class="InvoiceSection-text">
@@ -20,7 +22,11 @@
     </section>
     <br>
     <section class="InvoiceSection-text">
-      <p> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
+      <% if order.user.role == "User" %>
+        <p> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
+      <% else %>
+        <p>Walk-In Customer</p>
+      <% end %>
     </section>
     <br>
 
