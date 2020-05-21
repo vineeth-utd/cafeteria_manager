@@ -49,6 +49,14 @@ body{
   color: rgb(54, 14, 14);
 }
 
+.EditUsers-title{
+  font-family: sans-serif;
+  margin-bottom: 35px;
+  margin-top: 25px;
+  font-size: 40px;
+  color: rgb(54, 14, 14);
+}
+
 .UserList-section{
   width: 50%;
   margin: 20px auto;
@@ -131,6 +139,12 @@ body{
 
   .UserList-title{
     margin-bottom: 40px;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+  .EditUsers-title{
+    margin-bottom: 30px;
     margin-top: 10px;
     font-size: 25px;
   }
