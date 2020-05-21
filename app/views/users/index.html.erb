@@ -10,7 +10,7 @@
               <%= user.first_name.titlecase %> <%= user.last_name.titlecase %>
             </span>
             <span>
-              <%= link_to "Remove from Billing-Clerk", "/users/#{user.id}", method: "PATCH", class: "User-link" %>
+              <%= link_to "Remove from Billing-Clerk", "/users/#{user.id}?page=0", method: "PATCH", class: "User-link" %>
             </span>
           </p>
         <% end %>
@@ -27,7 +27,7 @@
         <% if user.role == "User" %>
           <p class="UserList-content">
             <span class="User-name"> <%= user.first_name.titlecase %> <%= user.last_name.titlecase %> </span>
-            <%= link_to "Add as Billing-Clerk", "/users/#{user.id}", method: "PATCH", class: "User-link" %>
+            <%= link_to "Add as Billing-Clerk", "/users/#{user.id}?page=0", method: "PATCH", class: "User-link" %>
           <p>
         <% end %>
       <% end %>

@@ -11,21 +11,39 @@
       <% end %>
     </section>
     <br>
+
     <section class="InvoiceSection-text">
     <% if @order.date %>
       <p> Ordered date: <%= @order.date %> </p>
     <% end %>
     </section>
     <br>
+
     <section class="InvoiceSection-text">
       <p class="spl-txt"> Billing To: </p>
+      <% if @order.user.role == "User" %>
+        <p class="Right-text spl-text"> Shipping To: </p>
+      <% end %>
     </section>
     <br>
+
     <section class="InvoiceSection-text">
       <% if @order.user.role == "User" %>
         <p> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
+        <% if @order.user.address %>
+          <p class="Right-text"> <%= @order.user.address %> </p>
+        <% end %>
       <% else %>
         <p>Walk-In Customer</p>
+      <% end %>
+    </section>
+    <br>
+
+    <section class="InvoiceSection-text">
+      <% if @order.user.role == "User" %>
+        <% if @order.user,phone %>
+          <p> <%= @order.user.phone %> </p>
+        <% end %>
       <% end %>
     </section>
     <br>

@@ -1,0 +1,46 @@
+<main class="Usersnew">
+  <p class="NewUsers-title">Edit Profile</p>
+  <section class="SignUp-box">
+    <%= form_with url: "/users/#{@current_user.id}?page=1", method: :patch do |form| %>
+      <div class="Form-section">
+        <%= form.text_field :first_name,
+          value: @current_user.first_name,
+          class: "Form-input",
+          placeholder: "First Name",
+          autofocus: "autofocus"
+        %>
+      </div>
+      <div class="Form-section">
+        <%= form.text_field :last_name,
+          value: @current_user.last_name,
+          class: "Form-input",
+          placeholder: "Last Name"
+        %>
+      </div>
+      <div class="Form-section">
+        <%= form.email_field :email,
+          value: @current_user.email,
+          class: "Form-input",
+          placeholder: "Email"
+        %>
+      </div>
+      <div class="Form-section">
+        <%= form.text_field :phone,
+          value: @current_user.phone,
+          class: "Form-input",
+          placeholder: "Phone No"
+        %>
+      </div>
+      <div class="Form-section">
+        <%= form.text_field :address,
+          value: @current_user.address,
+          class: "Form-input",
+          placeholder: "Address"
+        %>
+      </div>
+      <div class="Form-section">
+        <%= form.submit "Update", class: "Form-submit" %>
+      </div>
+    <% end %>
+  </section>
+</main>

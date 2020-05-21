@@ -10,6 +10,10 @@ class UsersController < ApplicationController
     render "/users/new"
   end
 
+  def edit
+    ensure_user_logged_in
+  end
+
   def create
     user = User.new(
       role: "User",
@@ -29,12 +33,26 @@ class UsersController < ApplicationController
 
   def update
     user = User.find(params[:id])
-    if user.role == "User"
-      user.role = "Billing-Clerk"
-    else
-      user.role = "User"
+    page = params[:page].to_i
+    if page == 0
+      if user.role == "User"
+        user.role = "Billing-Clerk"
+      else
+        user.role = "User"
+      end
+      user.save!
+      redirect_to users_path
     end
-    user.save!
-    redirect_to users_path
+    if page == 1
+      user.update(
+        first_name: params[:first_name],
+        last_name: params[:last_name],
+        email: params[:email],
+        phone: params[:phone],
+        address: params[:address],
+      )
+      flash[:notice] = "Profile updated successfully"
+      redirect_to menu_items_path
+    end
   end
 end

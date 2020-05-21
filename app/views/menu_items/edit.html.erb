@@ -2,7 +2,7 @@
 
   <section class="MenuItem-section">
     <section class="AddMenuItem">
-      <%= form_with url: "/menu_items/#{@menuitem.id}", method: "PATCH" do |form| %>
+      <%= form_with url: "/menu_items/#{@menuitem.id}", method: :patch do |form| %>
         <%= form.text_field :name,
           class: "AddMenuItem-text",
           placeholder: "MenuItem Name",
