@@ -41,7 +41,7 @@
 
     <section class="InvoiceSection-text">
       <% if @order.user.role == "User" %>
-        <% if @order.user,phone %>
+        <% if @order.user.phone %>
           <p> <%= @order.user.phone %> </p>
         <% end %>
       <% end %>

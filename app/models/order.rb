@@ -18,7 +18,7 @@ class Order < ActiveRecord::Base
     where("status = ?", "order_confirmed")
   end
 
-  def self.is_delivered?
+  def self.is_delivered
     if status == "delivered"
       true
     else

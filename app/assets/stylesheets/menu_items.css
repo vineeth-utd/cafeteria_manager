@@ -196,10 +196,11 @@ body{
 
   .AddMenuItem{
     height: 95px;
-    width: 70%;
-    margin: auto 60px;
+    width: 75%;
+    margin: auto 40px;
     margin-bottom: 80px;
     margin-top: 10px;
+    display: block
   }
 
   .AddMenuItem-text{
@@ -209,6 +210,7 @@ body{
     border-radius: 2px;
     border-bottom: 32px;
     width: 150;
+    margin-bottom: 5px;
   }
 
   .AddMenuItem-price{
@@ -218,12 +220,14 @@ body{
     border-radius: 2px;
     border-bottom: 32px;
     width: 110px;
+    margin-bottom: 5px;
   }
 
   .AddMenuItem-button{
     font-size: 12px;
     padding: 6px 22px;
     border-radius: 2px;
+    margin-bottom: 5px;
   }
 
   .MenuItem-icon{
@@ -237,7 +241,6 @@ body{
 
   .Category-title{
     font-size: 18px;
-    ;
   }
 
   .Category-section{

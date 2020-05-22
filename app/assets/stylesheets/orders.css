@@ -299,11 +299,12 @@
   }
 
   .Reports{
-    height: 50px;
-    width: 60%;
-    margin: auto 70px;
+    height: 60px;
+    width: 70%;
+    margin: auto 50px;
     margin-bottom: 80px;
     margin-top: 10px;
+    display: block;
   }
 
   .Reports-text{
@@ -313,21 +314,25 @@
     border-radius: 2px;
     border-bottom: 32px;
     width: 150px;
+    margin-bottom: 5px;
   }
 
   .Reports-date{
-    padding: 6px 8px;
+    padding: 6px 10px;
     font-size: 11px;
     margin-right: 5px;
     border-radius: 2px;
     border-bottom: 32px;
-    width: 120px;
+    width: 130px;
+    margin-bottom: 5px;
+    height: 27px;
   }
 
   .Reports-button{
     font-size: 12px;
     padding: 6px 22px;
     border-radius: 2px;
+    margin-bottom: 5px;
   }
 
   .OrderItem-section{

@@ -50,7 +50,6 @@ class OrdersController < ApplicationController
   end
 
   def invoice
-    ensure_manager
     @order = Order.find_by(params[:id])
     render "invoice"
   end
