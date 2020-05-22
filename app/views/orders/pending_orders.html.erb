@@ -1,7 +1,11 @@
 <h1 class="Order-title">Pending Orders</h1>
-<%= render partial: "orderlist", locals: {
-  orders: @orders,
-  pending_button: true,
-  report_form: false,
-  invoice_button: false
-} %>
+<% if @orders %>
+  <%= render partial: "orderlist", locals: {
+    orders: @orders,
+    pending_button: true,
+    report_form: false,
+    invoice_button: false
+  } %>
+<% else %>
+  <h6 class="Emptycart-text">No orders are pending to be delivered!</h6>
+<% end %>

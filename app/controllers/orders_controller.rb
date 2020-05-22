@@ -22,6 +22,7 @@ class OrdersController < ApplicationController
       order.status = "delivered"
       order.delivered_at = DateTime.now + (5.5 / 24)
       order.save!
+      flash[:notice] = "Your order with ID:#{order.id} is delivered!"
       redirect_to pending_orders_path
     end
   end
