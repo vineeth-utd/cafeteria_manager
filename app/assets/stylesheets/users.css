@@ -83,7 +83,7 @@ body{
   font-size: 18px;
   color: rgb(37, 138, 91);
   display: inline-block;
-  max-width: 120px;
+  max-width: 170px;
 }
 
 .User-id{
@@ -172,6 +172,7 @@ body{
 
   .User-name{
     font-size: 15px;
+    max-width: 120px;
   }
 
   .User-id{
