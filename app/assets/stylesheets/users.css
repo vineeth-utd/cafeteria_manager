@@ -82,13 +82,14 @@ body{
 .User-name{
   font-size: 18px;
   color: rgb(37, 138, 91);
-  margin-right: auto;
-  float: left;
+  display: inline-block;
+  width: 170px;
 }
 
 .User-id{
   font-size: 18px;
   color: rgb(37, 138, 91);
+  float: left;
 }
 
 .User-link{

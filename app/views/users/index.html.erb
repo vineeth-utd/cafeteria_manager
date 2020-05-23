@@ -6,10 +6,10 @@
       <% User.all.each do |user| %>
         <% if user.role == "Billing-Clerk" %>
           <p class="UserList-content">
+            <span class="User-id">Id: <%= user.id %> </span>
             <span class="User-name">
               <%= user.first_name.titlecase %> <%= user.last_name.titlecase %>
             </span>
-            <span class="User-id">Id: <%= user.id %> </span>
             <span>
               <%= link_to "Remove from Billing-Clerk", "/users/#{user.id}?page=0", method: "PATCH", class: "User-link" %>
             </span>
@@ -27,8 +27,10 @@
       <% User.all.each do |user| %>
         <% if user.role == "User" %>
           <p class="UserList-content">
-            <span class="User-name"> <%= user.first_name.titlecase %> <%= user.last_name.titlecase %> </span>
             <span class="User-id"> Id: <%= user.id %> </span>
+            <span class="User-name">
+              <%= user.first_name.titlecase %> <%= user.last_name.titlecase %>
+            </span>
             <span>
               <%= link_to "Add as Billing-Clerk", "/users/#{user.id}?page=0", method: "PATCH", class: "User-link" %>
             </span>
