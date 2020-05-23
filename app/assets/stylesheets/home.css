@@ -81,13 +81,14 @@ body{
 }
 
 .nav-link{
+  font-family: Lato;
+  font-weight: bold;
   margin: 5px;
   padding: 7px;
-  font-size: 13px;
+  font-size: 15px;
   box-sizing: border-box;
   display: inline-block;
   color: snow;
-  /*background-color: rgb(12, 99, 136);*/
   text-decoration: none;
   border-radius: 4px;
 }
@@ -151,12 +152,15 @@ body{
     display: none;
   }
 
+  .navbar-expand-md .navbar-nav .nav-link{
+    padding-left: 5px;
+  }
+
   .nav-links{
     margin-left: 0px;
   }
 
   .nav-link{
-    /*background: none;*/
     border-radius: 2px;
     margin-left: 0px;
     margin-right: auto;
@@ -166,22 +170,27 @@ body{
   }
 
   .fixed-nav{
+    display: flex;
     display: block;
-    width: 100px;
+    width: 125px;
     position: fixed;
     bottom: 22px;
-    margin-left: 35vw;
+    margin-left: 34vw;
     background: linear-gradient(to bottom, #00cc99 0%, #258655 100%);
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: 2px;
   }
 
   .fixed-link{
     text-decoration: none;
-    margin: 5px;
-    padding: 8px;
+    margin: 2.5px;
+    padding: 2px;
     font-size: 13px;
     color: white;
+  }
+
+  .nav-icons1{
+    height: 20px;
+    width: 20px;
   }
 }
