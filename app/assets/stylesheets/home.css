@@ -76,6 +76,10 @@ body{
   width: 40px;
 }
 
+.nav-links{
+  margin-left: auto;
+}
+
 .nav-link{
   margin: 5px;
   padding: 7px;
@@ -83,13 +87,38 @@ body{
   box-sizing: border-box;
   display: inline-block;
   color: snow;
-  background-color: rgb(12, 99, 136);
+  /*background-color: rgb(12, 99, 136);*/
   text-decoration: none;
   border-radius: 4px;
 }
 
+.navbar-expand-md .navbar-nav .nav-link{
+  padding-left: 0px;
+}
+
+.nav-items{
+  display: flex;
+}
+
+.nav-icons{
+  height: 25px;
+  width: 25px;
+}
+
 .fixed-nav{
   display: none;
+}
+
+.name-icon{
+  display: inline-block;
+  text-align: center;
+  height: 25px;
+  width: 25px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #c2185b;
+  /*margin-right: 5px;*/
+  font-family: monospace;
 }
 
 @media only screen and (max-width: 480px) {
@@ -122,10 +151,14 @@ body{
     display: none;
   }
 
+  .nav-links{
+    margin-left: 0px;
+  }
+
   .nav-link{
-    background: none;
+    /*background: none;*/
     border-radius: 2px;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-right: auto;
     padding-left: 0px;
     padding-right: 0px;
