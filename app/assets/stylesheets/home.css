@@ -97,6 +97,10 @@ body{
   padding-left: 0px;
 }
 
+.div-class{
+  display: none;
+}
+
 .pos{
   float: left;
   margin-right: 5px;
@@ -197,5 +201,9 @@ body{
   .nav-icons1{
     height: 20px;
     width: 20px;
+  }
+
+  .div-class{
+    display: block;
   }
 }

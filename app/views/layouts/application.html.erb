@@ -38,107 +38,109 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav nav-links">
-            <li class="nav-item nav-items">
-              <%= image_tag "icons8-about-48.png", class: "nav-icons" %>
-              <%= link_to "About Us", about_index_path, class: "nav-link" %>
-            </li>
-
-            <% if @current_user.role == "Manager" %>
-              <li class="dropdown nav-link nav-item nav-items">
-                <a class="dropdown-toggle" data-toggle="dropdown">
-                  <%= image_tag "icons8-restaurant-menu-48.png", class: "nav-icons" %>
-                  Menus
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu bg-dark">
-                  <li class="nav-item nav-items">
-                    <%= image_tag "icons8-top-menu-64.png", class: "nav-icons" %>
-                    <% if @current_user.role == "Manager" %>
-                      <%= link_to "ActiveMenu", menus_path, class: "nav-link" %>
-                    <% end %>
-                  </li>
-
-                  <li class="nav-item nav-items">
-                    <%= image_tag "icons8-restaurant-menu-64.png", class: "nav-icons" %>
-                    <%= link_to "Menus", menu_items_path, class: "nav-link" %>
-                  </li>
-                </ul>
-              </li>
-            <% else %>
+          <div class="div-class">
+            <br><br><br>
+          </div>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-links">
               <li class="nav-item nav-items">
-                <%= image_tag "icons8-restaurant-menu-48.png", class: "nav-icons" %>
-                <%= link_to "Menus", menu_items_path, class: "nav-link" %>
+                <%= image_tag "icons8-about-48.png", class: "nav-icons" %>
+                <%= link_to "About Us", about_index_path, class: "nav-link" %>
               </li>
-            <% end %>
 
+              <% if @current_user.role == "Manager" %>
+                <li class="dropdown nav-link nav-item nav-items">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                    <%= image_tag "icons8-restaurant-menu-48.png", class: "nav-icons" %>
+                    Menus
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu bg-dark">
+                    <li class="nav-item nav-items">
+                      <%= image_tag "icons8-top-menu-64.png", class: "nav-icons" %>
+                      <% if @current_user.role == "Manager" %>
+                        <%= link_to "ActiveMenu", menus_path, class: "nav-link" %>
+                      <% end %>
+                    </li>
 
-            <% if @current_user.role == "User" %>
-              <li class="nav-item nav-items">
-                <%= image_tag "icons8-shopping-bag-64.png", class: "nav-icons" %>
-                <%= link_to "My Orders", orders_path, class: "nav-link" %>
-              </li>
-            <% else %>
-              <li class="dropdown nav-link nav-item nav-items">
-                <a class="dropdown-toggle" data-toggle="dropdown">
-                  <%= image_tag "icons8-shopping-bag-64.png", class: "nav-icons" %>
-                  Orders
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu bg-dark">
-                  <li class="nav-item nav-items">
-                    <%= image_tag "icons8-historical-40.png", class: "nav-icons" %>
-                    <% unless @current_user.role == "User"  %>
-                      <%= link_to "Pending", pending_orders_path, class: "nav-link" %>
-                    <% end %>
-                  </li>
-
-                  <li class="nav-item nav-items">
-                    <%= image_tag "icons8-purchase-order-144.png", class: "nav-icons" %>
-                    <%= link_to "All Orders", orders_path, class: "nav-link" %>
-                  </li>
-                </ul>
-              </li>
-            <% end %>
-
-            <li class="nav-item nav-items">
-              <%= image_tag "icons8-shopping-cart-48.png", class: "nav-icons" %>
-              <% if @current_user.role == "User" %>
-                <%= link_to "My Cart", new_order_path, class: "nav-link" %>
+                    <li class="nav-item nav-items">
+                      <%= image_tag "icons8-restaurant-menu-64.png", class: "nav-icons" %>
+                      <%= link_to "Menus", menu_items_path, class: "nav-link" %>
+                    </li>
+                  </ul>
+                </li>
               <% else %>
-                <%= link_to "Offline Cart", new_order_path, class: "nav-link" %>
+                <li class="nav-item nav-items">
+                  <%= image_tag "icons8-restaurant-menu-48.png", class: "nav-icons" %>
+                  <%= link_to "Menus", menu_items_path, class: "nav-link" %>
+                </li>
               <% end %>
-            </li>
 
-            <li class="dropdown nav-link nav-item nav-items">
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                <span class="name-icon"> <%= @current_user.first_name[0] %> </span>
-                <%= @current_user.first_name %> <%= @current_user.last_name %>
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu bg-dark">
-                <li class="nav-item nav-items">
-                  <% if @current_user.role == "Manager" %>
-                    <%= image_tag "icons8-team-48.png", class: "nav-icons" %>
-                    <%= link_to "Users List", users_path, class: "nav-link" %>
-                  <% end %>
-                </li>
 
+              <% if @current_user.role == "User" %>
                 <li class="nav-item nav-items">
-                  <%= image_tag "icons8-edit-48.png", class: "nav-icons" %>
-                  <%= link_to "Edit-Profile", edit_user_path(id: @current_user.id), method: :get, local: true, class: "nav-link" %>
+                  <%= image_tag "icons8-shopping-bag-64.png", class: "nav-icons" %>
+                  <%= link_to "My Orders", orders_path, class: "nav-link" %>
                 </li>
+              <% else %>
+                <li class="dropdown nav-link nav-item nav-items">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                    <%= image_tag "icons8-shopping-bag-64.png", class: "nav-icons" %>
+                    Orders
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu bg-dark">
+                    <li class="nav-item nav-items">
+                      <%= image_tag "icons8-historical-40.png", class: "nav-icons" %>
+                      <% unless @current_user.role == "User"  %>
+                        <%= link_to "Pending", pending_orders_path, class: "nav-link" %>
+                      <% end %>
+                    </li>
 
-                <li class="nav-item nav-items">
-                  <%= image_tag "icons8-sign-out-48.png", class: "nav-icons" %>
-                  <%= link_to "Sign-Out", destroy_session_path, method: :delete, class: "nav-link" %>
+                    <li class="nav-item nav-items">
+                      <%= image_tag "icons8-purchase-order-144.png", class: "nav-icons" %>
+                      <%= link_to "All Orders", orders_path, class: "nav-link" %>
+                    </li>
+                  </ul>
                 </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+              <% end %>
+
+              <li class="nav-item nav-items">
+                <%= image_tag "icons8-shopping-cart-48.png", class: "nav-icons" %>
+                <% if @current_user.role == "User" %>
+                  <%= link_to "My Cart", new_order_path, class: "nav-link" %>
+                <% else %>
+                  <%= link_to "Offline Cart", new_order_path, class: "nav-link" %>
+                <% end %>
+              </li>
+
+              <li class="dropdown nav-link nav-item nav-items">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="name-icon"> <%= @current_user.first_name[0] %> </span>
+                  <%= @current_user.first_name %> <%= @current_user.last_name %>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li class="nav-item nav-items">
+                    <% if @current_user.role == "Manager" %>
+                      <%= image_tag "icons8-team-48.png", class: "nav-icons" %>
+                      <%= link_to "Users List", users_path, class: "nav-link" %>
+                    <% end %>
+                  </li>
+
+                  <li class="nav-item nav-items">
+                    <%= image_tag "icons8-edit-48.png", class: "nav-icons" %>
+                    <%= link_to "Edit-Profile", edit_user_path(id: @current_user.id), method: :get, local: true, class: "nav-link" %>
+                  </li>
+
+                  <li class="nav-item nav-items">
+                    <%= image_tag "icons8-sign-out-48.png", class: "nav-icons" %>
+                    <%= link_to "Sign-Out", destroy_session_path, method: :delete, class: "nav-link" %>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </section>
       </nav>
 
