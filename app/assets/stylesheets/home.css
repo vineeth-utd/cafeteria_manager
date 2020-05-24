@@ -97,6 +97,11 @@ body{
   padding-left: 0px;
 }
 
+.pos{
+  float: inline-start;
+  margin-right: 5px;
+}
+
 .nav-items{
   display: flex;
 }
