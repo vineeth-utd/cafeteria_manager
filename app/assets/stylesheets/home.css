@@ -98,7 +98,7 @@ body{
 }
 
 .pos{
-  float: inline-start;
+  float: left;
   margin-right: 5px;
 }
 
