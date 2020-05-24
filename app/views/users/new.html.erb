@@ -1,6 +1,10 @@
 <main class="Usersnew">
   <p class="NewUsers-title">Welcome new User!</p>
   <section class="SignUp-box">
+    <div class="Signin-link">
+      Already have an account?
+      <%= link_to "Login here", new_sessions_path %>
+    </div>
     <%= form_with url: users_path do |form| %>
       <div class="Form-section">
         <%= form.text_field :first_name,

@@ -18,6 +18,13 @@ body{
   background: white;
 }
 
+.Signin-link{
+  font-family: Andika;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
 .Usersnew{
   margin-top: 30px;
 }
@@ -119,6 +126,13 @@ body{
     border: 2.5px solid #8d3737;
     border-radius: 10px;
     box-shadow: 1.5px 1.5px 7px;
+  }
+
+  .Signin-link{
+    font-family: Andika;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .Form-section {

@@ -1,6 +1,10 @@
 <main class="Usersnew">
   <p class="NewUsers-title">Sign-In!</p>
   <section class="SignUp-box">
+    <div class="Signin-link">
+      New to Cafeteria?
+      <%= link_to "Register here", new_user_path %>
+    </div>
     <%= form_with url: sessions_path do |form| %>
       <div class="Form-section">
         <%= form.email_field :email,
