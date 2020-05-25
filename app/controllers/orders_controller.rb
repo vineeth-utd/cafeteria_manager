@@ -51,7 +51,10 @@ class OrdersController < ApplicationController
   end
 
   def invoice
-    @order = Order.find_by(params[:id])
-    render "invoice"
+    id = params[:id]
+    if id
+      @order = Order.find(id)
+      render "invoice"
+    end
   end
 end
