@@ -5,8 +5,11 @@
     <section class="InvoiceSection-text">
       <p> Order Id: <%= @order.id %> </p>
       <% if @order.delivered_at %>
-        <p class="Right-text invoice-date">
-          Delivered date: <%= @order.delivered_at.strftime("%-d %b,%Y") %> at <%= @order.delivered_at.strftime("%I:%M %P") %>
+        <p class="Right-text">
+          Delivered date:
+          <span class="invoice-date">
+            <%= @order.delivered_at.strftime("%-d %b,%Y") %> at <%= @order.delivered_at.strftime("%I:%M %P") %>
+          </span>
         </p>
       <% end %>
     </section>
@@ -14,7 +17,11 @@
 
     <section class="InvoiceSection-text">
     <% if @order.date %>
-      <p class="invoice-date"> Ordered date: <%= @order.date.strftime("%-d %b, %Y") %> </p>
+      <p> Ordered date:
+        <span class="invoice-date">
+          <%= @order.date.strftime("%-d %b, %Y") %>
+        </span>
+      </p>
     <% end %>
     </section>
     <br>
