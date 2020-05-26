@@ -26,9 +26,12 @@
         <a href="#" class="pull-left">
           <%= image_tag "icons8-school-cafeteria-50-2.png", class: "nav-icon" %>
         </a>
-        <a class="navbar-brand" href="#" style="margin-right: 50px">
-          Cafeteria Management
-        </a>
+        <%= link_to "Cafeteria Management",
+          about_index_path,
+          class: "navbar-brand",
+          style: "margin-right: 50px"
+        %>
+
         <section class="nav-links">
           <button
             class="navbar-toggler pos"
