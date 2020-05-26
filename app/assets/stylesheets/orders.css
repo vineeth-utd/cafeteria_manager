@@ -239,7 +239,7 @@
   }
 
   .Invoice-item{
-    max-width: 90px;
+    max-width: 85px;
   }
 
   .Cart-price{
@@ -388,10 +388,13 @@
   }
 
   .Right-text{
-    max-width: 180px;
+    max-width: 140px;
   }
 
   .spl-text{
     font-size: 17.5px;
   }
+   .User-fullname{
+     max-width: 100px;
+   }
 }

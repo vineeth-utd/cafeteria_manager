@@ -14,7 +14,7 @@
 
     <section class="InvoiceSection-text">
     <% if @order.date %>
-      <p> Ordered date: <%= @order.date %> </p>
+      <p> Ordered date: <%= @order.date.strftime("%-d %b, %y") %> </p>
     <% end %>
     </section>
     <br>
@@ -22,14 +22,14 @@
     <section class="InvoiceSection-text">
       <p class="spl-txt"> Billing To: </p>
       <% if @order.user.role == "User" %>
-        <p class="Right-text spl-text"> Shipping To: </p>
+        <p class="Right-text spl-txt"> Shipping To: </p>
       <% end %>
     </section>
     <br>
 
     <section class="InvoiceSection-text">
       <% if @order.user.role == "User" %>
-        <p> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
+        <p class="User-fullname"> <%= @order.user.first_name %> <%= @order.user.last_name %> </p>
         <% if @order.user.address %>
           <p class="Right-text"> <%= @order.user.address %> </p>
         <% end %>
