@@ -394,7 +394,12 @@
   .spl-text{
     font-size: 17.5px;
   }
-   .User-fullname{
+
+  .User-fullname{
      max-width: 100px;
-   }
+  }
+
+  .invoice-date{
+    font-size: 11px;
+  }
 }
