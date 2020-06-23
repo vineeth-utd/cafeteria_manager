@@ -8,7 +8,11 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
-      redirect_to menu_items_path
+      if current_user.role == "User"
+        redirect_to menu_items_path
+      else
+        redirect_to pending_orders_path
+      end
     else
       flash[:error] = "Invalid email or password!"
       redirect_to new_sessions_path
