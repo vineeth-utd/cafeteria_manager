@@ -150,6 +150,45 @@
         <%= image_tag "icons8-buying-64.png", class: "nav-icons1" %>
         <%= link_to "View Cart", new_order_path, class: "fixed-link" %>
       </div>
+
+    <% else %>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a href="#" class="pull-left">
+          <%= image_tag "icons8-school-cafeteria-50-2.png", class: "nav-icon" %>
+        </a>
+        <%= link_to "Cafeteria Management",
+          about_index_path,
+          class: "navbar-brand",
+          style: "margin-right: 50px"
+        %>
+
+        <section class="nav-links">
+          <button
+            class="navbar-toggler pos"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="div-class">
+            <br><br><br>
+          </div>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-links">
+              <li class="nav-item nav-items">
+                <%= image_tag "icons8-login-rounded-50-2.png", class: "nav-icons" %>
+                <%= link_to "Sign-in", new_sessions_path, class: "nav-link" %>
+              </li>
+
+              <li class="nav-item nav-items">
+                <%= image_tag "icons8-add-user-male-50.png", class: "nav-icons" %>
+                <%= link_to "Sign-Up", new_user_path, class: "nav-link" %>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </nav>
     <% end %>
 
 
