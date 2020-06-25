@@ -15,12 +15,17 @@ body{
 }
 
 .About-section{
-  width: 65%;
+  width: 85%;
   margin: 45px auto;
   margin-bottom: 40px;
   padding: 15px;
   padding-top: 7px;
+  padding-right: 55px;
+  padding-left: 55px;
   text-align: center;
+}
+
+.section-about{
   background-color: rgb(240, 205, 205);
 }
 
