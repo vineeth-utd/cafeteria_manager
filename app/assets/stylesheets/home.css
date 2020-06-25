@@ -235,4 +235,10 @@ body{
   .div-class{
     display: block;
   }
+
+  .main-about{
+    width: 95%;
+    margin: 12px auto;
+    padding-top: 3px;
+  }
 }

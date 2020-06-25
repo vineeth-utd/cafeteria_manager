@@ -20,8 +20,6 @@ body{
   margin-bottom: 40px;
   padding: 15px;
   padding-top: 7px;
-  padding-right: 55px;
-  padding-left: 55px;
   text-align: center;
 }
 
@@ -88,5 +86,4 @@ body{
     weight: 600;
     margin-top: 10px;
   }
-
 }
