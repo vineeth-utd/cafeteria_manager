@@ -1,3 +1,4 @@
+<body class="classbody">
 <% menu = Menu.active %>
 <h3 class=MenuItemPage-title> <%= menu.name %> </h3>
 
@@ -24,3 +25,4 @@
 <% @categories.each do |category| %>
   <%= render partial: "menulist", locals: {category: category, menus: menu} %>
 <% end %>
+</body>

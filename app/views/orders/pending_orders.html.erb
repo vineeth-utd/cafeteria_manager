@@ -1,3 +1,4 @@
+<body class="classbody">
 <h1 class="Order-title">Pending Orders</h1>
 <% if @orders %>
   <%= render partial: "orderlist", locals: {
@@ -9,3 +10,4 @@
 <% else %>
   <h6 class="Emptycart-text">No orders are pending to get delivered!</h6>
 <% end %>
+</body>

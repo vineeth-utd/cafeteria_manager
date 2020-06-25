@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.classbody{
+  background: linear-gradient(to right, #ffafbd 0%, #ffc3a0 100%);
+}
+
 .Reports{
   height: 32px;
   align-items: stretch;

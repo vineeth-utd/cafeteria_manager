@@ -2,6 +2,10 @@ body{
   text-align: center;
 }
 
+.classbody{
+  background: linear-gradient(to right, #ffafbd 0%, #ffc3a0 100%);
+}
+
 .MenuPage-title{
   font-family: sans-serif;
   font-size: 35px;

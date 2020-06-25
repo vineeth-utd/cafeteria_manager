@@ -1,6 +1,13 @@
 body{
   text-align: center;
-  background: linear-gradient(to right, #ffafbd 0%, #ffc3a0 100%);
+  /*background: linear-gradient(to right, #ffafbd 0%, #ffc3a0 100%);*/
+}
+
+.homebody{
+  background-image: url("cafeteria-1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .Home-title{

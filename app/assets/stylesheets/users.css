@@ -2,6 +2,10 @@ body{
   text-align: center;
 }
 
+.classbody{
+  background: linear-gradient(to right, #ffafbd 0%, #ffc3a0 100%);
+}
+
 .NewUsers-title {
   font-family: sans-serif;
   margin-bottom: 30px;
